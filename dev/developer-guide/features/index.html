@@ -3454,7 +3454,7 @@ and <a href="../../operations-guide/administration/public-access/">Public Access
 </ul>
 <h3 id="authentication">Authentication<a class="headerlink" href="#authentication" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>AWS SigV4</strong> for requests and presigned URLs. SigV2 is refused with <code>400 InvalidRequest</code>, as S3 refuses it on buckets created since June 2020; with boto3 use <code>botocore.config.Config(signature_version="s3v4")</code>.</li>
+<li><strong>AWS SigV4</strong> for requests and presigned URLs. The admin, Iceberg and Unity APIs also take a request signed over its body's hash without <code>x-amz-content-sha256</code>, as botocore's generic <code>SigV4Auth</code> and PyIceberg sign it; the body, up to 2 MiB, is hashed to check it. SigV2 is refused with <code>400 InvalidRequest</code>, as S3 refuses it on buckets created since June 2020; with boto3 use <code>botocore.config.Config(signature_version="s3v4")</code>.</li>
 <li><strong>Anonymous requests</strong>: served only what a bucket policy grants to everyone, with public access blocked by default</li>
 <li><strong>OIDC</strong>: the operator's provider and <strong>each tenant's own</strong> (Keycloak, Entra ID, Okta, Google, any compliant issuer); groups from any claim, dotted paths included; a console sign-in is the user bound to the token's issuer and subject, in the tenant its provider serves</li>
 <li><strong>STS <code>AssumeRoleWithWebIdentity</code></strong>: an OIDC token for a role's temporary keys, AWS-wire-compatible; a tenant's roles trust only that tenant's provider, system roles only the operator's</li>
@@ -3518,7 +3518,7 @@ and <a href="../../operations-guide/administration/public-access/">Public Access
 <h3 id="client-compatibility">Client Compatibility<a class="headerlink" href="#client-compatibility" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>Catalog URI</strong> <code>http://&lt;gateway&gt;/iceberg</code> (clients add <code>/v1</code>), <code>warehouse</code> = a warehouse's name</li>
-<li><strong>PyIceberg</strong>: SigV4 signing (<code>rest.sigv4-enabled=true</code>); the code repo's <code>examples/pyiceberg</code> runs against <code>objectio-aio</code></li>
+<li><strong>PyIceberg</strong>: SigV4 signing (<code>rest.sigv4-enabled=true</code>), over each body's hash without <code>x-amz-content-sha256</code> (botocore's generic signer), which the gateway hashes the body to check; the code repo's <code>examples/pyiceberg</code> runs against <code>objectio-aio</code></li>
 <li><strong>Spark, Trino</strong>: the REST catalog clients, with SigV4 or OAuth2</li>
 <li>No query engine is tested against the catalog in CI yet (<a href="https://github.com/object-io/objectio/issues/8">objectio#8</a>)</li>
 </ul>

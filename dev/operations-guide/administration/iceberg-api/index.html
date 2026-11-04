@@ -4148,7 +4148,11 @@ so <code>.../iceberg/v1</code> makes them call <code>/iceberg/v1/v1/…</code>. 
 a warehouse's <strong>name</strong>, not an <code>s3://</code> location. The pyiceberg example in
 the code repo (<code>examples/pyiceberg</code>) signs with SigV4
 (<code>rest.sigv4-enabled</code>, <code>rest.signing-name s3</code>) and runs against
-<code>objectio-aio</code>; no query engine is tested against the catalog in CI yet
+<code>objectio-aio</code>. PyIceberg signs with botocore's generic SigV4 signer,
+over the hash of each request's body without sending it in
+<code>x-amz-content-sha256</code>; the gateway hashes the body to check the
+signature, up to 2 MiB a request
+(<a href="../authentication/#the-signed-body">the signed body</a>); no query engine is tested against the catalog in CI yet
 (<a href="https://github.com/object-io/objectio/issues/8">objectio#8</a>), so treat
 the Spark and Trino settings below as a starting point.</p>
 <h3 id="pyiceberg">PyIceberg<a class="headerlink" href="#pyiceberg" title="Permanent link">&para;</a></h3>

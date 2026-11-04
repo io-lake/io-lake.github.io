@@ -3728,6 +3728,14 @@ the same core. Apache-2.0, every feature.</p>
 </ul>
 <h3 id="fixes">Fixes<a class="headerlink" href="#fixes" title="Permanent link">&para;</a></h3>
 <ul>
+<li><strong>PyIceberg with SigV4 works as the docs configure it.</strong> It signs with
+  botocore's generic SigV4 signer, over the hash of the body without
+  sending it in <code>x-amz-content-sha256</code>, and its first call was refused.
+  The admin API, the Iceberg REST catalog and Unity Catalog now hash a
+  body the signature was made over, up to 2 MiB, and refuse a body
+  changed after signing; a larger one is refused with <code>413</code> unless its
+  hash is sent. The S3 API is unchanged
+  (<a href="../../operations-guide/administration/authentication/#the-signed-body">the signed body</a>).</li>
 <li>The S3, Iceberg and Unity request-duration histograms counted each
   request in its buckets twice, so a bucket could pass <code>+Inf</code> and every
   percentile read from them came out low.</li>

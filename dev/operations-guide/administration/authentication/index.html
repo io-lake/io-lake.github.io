@@ -3819,7 +3819,7 @@ Signature=fe5f80f77d5fa3beca038a248ff027d0445342fe2855ddc963176630326f1024
 </tr>
 <tr>
 <td><code>x-amz-content-sha256</code></td>
-<td>SHA-256 hash of request body</td>
+<td>SHA-256 hash of request body; on the S3 API only (see below)</td>
 </tr>
 </tbody>
 </table>
@@ -3858,6 +3858,22 @@ gateway holds the body to it. What each value means:</p>
 </tr>
 </tbody>
 </table>
+<p>On the S3 API, a request without <code>x-amz-content-sha256</code> signed no body,
+as if it sent <code>UNSIGNED-PAYLOAD</code>; every S3 SDK sends the header.</p>
+<p>The other APIs on the gateway (the admin API, the Iceberg REST catalog,
+Unity Catalog) also take a request signed as standard SigV4 is for any
+service but S3: over the SHA-256 of its body, with no
+<code>x-amz-content-sha256</code> header. That is how botocore's generic
+<code>SigV4Auth</code> signs, and so PyIceberg with <code>rest.sigv4-enabled</code>, and most
+SigV4 libraries that aren't S3 SDKs. The gateway reads the body and
+checks the signature over its hash, so a body changed after signing is
+refused (<code>401</code> on the catalogs, <code>403 SignatureDoesNotMatch</code> on the
+admin API). It reads at most 2 MiB that way: a larger body is refused
+with <code>413</code>, and is signed by sending its hash in the header. A request
+signed over <code>UNSIGNED-PAYLOAD</code> without the header is accepted there as
+on the S3 API, and its body is not read. The
+<a href="../iam/#the-aws-iam-and-sts-apis">IAM and STS query API</a> (<code>POST /</code>)
+checks its form body's hash as well.</p>
 <p>A trailer the request names in <code>x-amz-trailer</code> must come at the end of
 the body: one left off is refused with <code>400 MalformedTrailerError</code>. Each
 streaming form is what some SDK sends by default for uploads (aws-cli,

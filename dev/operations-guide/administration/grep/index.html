@@ -3432,7 +3432,10 @@ can't do it; <code>pcre2</code> can):</p>
         <span class="k">break</span>
 </code></pre></div>
 <h2 id="example-from-the-command-line">Example — from the command line<a class="headerlink" href="#example-from-the-command-line" title="Permanent link">&para;</a></h2>
-<p><code>curl</code> using SigV4 via <code>awscurl</code> / <code>aws s3api</code> helpers:</p>
+<p><code>curl</code> using SigV4 via <code>awscurl</code> / <code>aws s3api</code> helpers. The S3 API takes
+the body's hash from <code>x-amz-content-sha256</code>, which botocore's
+<code>S3SigV4Auth</code> sends and its generic <code>SigV4Auth</code> doesn't
+(<a href="../authentication/#the-signed-body">the signed body</a>):</p>
 <div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">OBJ</span><span class="o">=</span>http://localhost:9000
 python3<span class="w"> </span>-<span class="w"> </span><span class="s">&lt;&lt;'EOF'</span>
 <span class="s">import boto3, json, os</span>
@@ -3443,7 +3446,7 @@ python3<span class="w"> </span>-<span class="w"> </span><span class="s">&lt;&lt;
 <span class="s">body = json.dumps({"pattern": "ERROR.*timeout", "max_matches": 20}).encode()</span>
 <span class="s">r = AWSRequest(method="POST", url=f"{os.environ['OBJ']}/logs/app.log?grep",</span>
 <span class="s">               data=body, headers={"Content-Type": "application/json"})</span>
-<span class="s">botocore.auth.SigV4Auth(creds, "s3", "us-east-1").add_auth(r)</span>
+<span class="s">botocore.auth.S3SigV4Auth(creds, "s3", "us-east-1").add_auth(r)</span>
 <span class="s">with urlopen(Request(r.url, data=body, headers=dict(r.headers), method="POST")) as resp:</span>
 <span class="s">    for line in resp: print(line.decode().rstrip())</span>
 <span class="s">EOF</span>
