@@ -3728,6 +3728,13 @@ the same core. Apache-2.0, every feature.</p>
 </ul>
 <h3 id="fixes">Fixes<a class="headerlink" href="#fixes" title="Permanent link">&para;</a></h3>
 <ul>
+<li><strong>A cluster with one meta node no longer answers writes <code>503</code> on a slow
+  disk.</strong> Meta gave up confirming its own leadership after a second, and
+  with one voter that confirmation waits for the log write in progress, so a
+  disk sync over a second turned a write into "the metadata service is
+  unavailable". The only voter now waits for it; clusters with more voters
+  keep the one-second limit
+  (meta).</li>
 <li><strong>The console reads and changes a bucket's versioning, object lock,
   encryption, lifecycle and replication.</strong> It asked the S3 API for them,
   which refuses a console session, and showed them as off; the admin API
