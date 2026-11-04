@@ -3728,6 +3728,12 @@ the same core. Apache-2.0, every feature.</p>
 </ul>
 <h3 id="fixes">Fixes<a class="headerlink" href="#fixes" title="Permanent link">&para;</a></h3>
 <ul>
+<li><strong>The console reads and changes a bucket's versioning, object lock,
+  encryption, lifecycle and replication.</strong> It asked the S3 API for them,
+  which refuses a console session, and showed them as off; the admin API
+  now has them, for the system administrator and the bucket's tenant
+  administrators
+  (<a href="../../operations-guide/administration/s3-api/#bucket-settings-on-the-admin-api">bucket settings</a>).</li>
 <li><strong>PyIceberg with SigV4 works as the docs configure it.</strong> It signs with
   botocore's generic SigV4 signer, over the hash of the body without
   sending it in <code>x-amz-content-sha256</code>, and its first call was refused.
