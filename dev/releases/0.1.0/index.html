@@ -3010,6 +3010,45 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#changes-since-010-rc3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Changes since 0.1.0-rc.3
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Changes since 0.1.0-rc.3">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Added
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fixes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fixes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#changes-since-010-rc2" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3022,7 +3061,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#added" class="md-nav__link">
+  <a href="#added_1" class="md-nav__link">
     <span class="md-ellipsis">
       
         Added
@@ -3044,7 +3083,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#fixes" class="md-nav__link">
+  <a href="#fixes_1" class="md-nav__link">
     <span class="md-ellipsis">
       
         Fixes
@@ -3094,7 +3133,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#fixes_1" class="md-nav__link">
+  <a href="#fixes_2" class="md-nav__link">
     <span class="md-ellipsis">
       
         Fixes
@@ -3268,6 +3307,45 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#changes-since-010-rc3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Changes since 0.1.0-rc.3
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Changes since 0.1.0-rc.3">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Added
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fixes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fixes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#changes-since-010-rc2" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3280,7 +3358,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#added" class="md-nav__link">
+  <a href="#added_1" class="md-nav__link">
     <span class="md-ellipsis">
       
         Added
@@ -3302,7 +3380,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#fixes" class="md-nav__link">
+  <a href="#fixes_1" class="md-nav__link">
     <span class="md-ellipsis">
       
         Fixes
@@ -3352,7 +3430,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#fixes_1" class="md-nav__link">
+  <a href="#fixes_2" class="md-nav__link">
     <span class="md-ellipsis">
       
         Fixes
@@ -3635,8 +3713,29 @@ the same core. Apache-2.0, every feature.</p>
   (<a href="../../operations-guide/operations/production/">production</a>,
   <a href="../../operations-guide/installation/hardware-sizing/">hardware sizing</a>).</li>
 </ul>
-<h2 id="changes-since-010-rc2">Changes since 0.1.0-rc.2<a class="headerlink" href="#changes-since-010-rc2" title="Permanent link">&para;</a></h2>
+<h2 id="changes-since-010-rc3">Changes since 0.1.0-rc.3<a class="headerlink" href="#changes-since-010-rc3" title="Permanent link">&para;</a></h2>
 <h3 id="added">Added<a class="headerlink" href="#added" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>The console is redone.</strong> Pages are grouped by job, every page has the
+  same layout and a top bar that shows whether the cluster's data is
+  protected, rebuilding or at risk, and ⌘K jumps to any page. The overview
+  leads with data protection and a list of what needs attention; a new
+  Cluster health page shows placement groups, repair, drains and every
+  drive by rack and host; buckets have a details panel and the object
+  browser is inside each bucket; Iceberg and Unity tables share one
+  catalog browser. Light and dark themes
+  (<a href="../../developer-guide/features/#8-web-console">web console</a>).</li>
+</ul>
+<h3 id="fixes">Fixes<a class="headerlink" href="#fixes" title="Permanent link">&para;</a></h3>
+<ul>
+<li>The S3, Iceberg and Unity request-duration histograms counted each
+  request in its buckets twice, so a bucket could pass <code>+Inf</code> and every
+  percentile read from them came out low.</li>
+<li>Console form labels are tied to their fields, so a screen reader names
+  them.</li>
+</ul>
+<h2 id="changes-since-010-rc2">Changes since 0.1.0-rc.2<a class="headerlink" href="#changes-since-010-rc2" title="Permanent link">&para;</a></h2>
+<h3 id="added_1">Added<a class="headerlink" href="#added_1" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>Meta can be backed up and restored.</strong> <code>obioctl meta export</code> takes a
   backup of meta's whole state from a live cluster; <code>objectio-meta
@@ -3714,7 +3813,7 @@ the same core. Apache-2.0, every feature.</p>
   0.1.0-rc.1's <code>objectio-install</code> wrote
   (<a href="../../operations-guide/installation/configuration/">OSD configuration</a>).</li>
 </ul>
-<h3 id="fixes">Fixes<a class="headerlink" href="#fixes" title="Permanent link">&para;</a></h3>
+<h3 id="fixes_1">Fixes<a class="headerlink" href="#fixes_1" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>The container images' default commands start their service</strong>: the
   meta, OSD and gateway images passed <code>--bind</code>, which none of them has.</li>
@@ -3913,7 +4012,7 @@ format level 10; 0.1.0-rc.1 is 8. Before finalizing:</p>
   can't read is refused with <code>503</code> (retry), rather than decided without
   them.</li>
 </ul>
-<h3 id="fixes_1">Fixes<a class="headerlink" href="#fixes_1" title="Permanent link">&para;</a></h3>
+<h3 id="fixes_2">Fixes<a class="headerlink" href="#fixes_2" title="Permanent link">&para;</a></h3>
 <p>Data read and written correctly:</p>
 <ul>
 <li><strong>An encrypted object larger than one stripe</strong> (16 MiB at 4+2), stored

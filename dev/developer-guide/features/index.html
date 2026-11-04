@@ -3687,100 +3687,91 @@ What exists today is file-like access through S3:</p>
 </ul>
 <hr />
 <h1 id="8-web-console">8. Web Console<a class="headerlink" href="#8-web-console" title="Permanent link">&para;</a></h1>
-<h3 id="authentication_2">Authentication<a class="headerlink" href="#authentication_2" title="Permanent link">&para;</a></h3>
+<h3 id="signing-in">Signing in<a class="headerlink" href="#signing-in" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>Login page</strong>: Access key + secret key authentication</li>
-<li><strong>Session management</strong>: HMAC-signed HttpOnly cookies, 24-hour TTL</li>
-<li><strong>Tenant-aware</strong>: Sidebar adapts based on user's tenant (admin pages hidden for tenant users)</li>
-<li><strong>Logout</strong>: Clears session cookie</li>
+<li><strong>Sign-in page</strong>: access key and secret key, or single sign-on through the operator's or a tenant's OIDC provider</li>
+<li><strong>Session</strong>: HMAC-signed HttpOnly cookie, 24-hour TTL; signing out clears it</li>
+<li><strong>Two consoles</strong>: the ops console (system administrators, every page) and the tenant console (a tenant's own buckets, tables, users and policies); each can be served on its own listener</li>
+</ul>
+<h3 id="the-frame">The frame<a class="headerlink" href="#the-frame" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Navigation grouped by job</strong>: Overview · Storage (Buckets) · Lakehouse (Catalog, Sharing) · Cluster (Health, Nodes and drives, Pools and placement, Performance) · Access (Tenants, Users and keys, Policies, Sign-in providers) · Security (Encryption). The tenant console shows only its own pages.</li>
+<li><strong>Top bar on every page</strong>: the breadcrumb, and the cluster's data protection read from every placement group's state: all data protected, rebuilding, short of a drive, or at risk. It links to Cluster health.</li>
+<li><strong>Jump to a page</strong>: ⌘K or Ctrl+K searches the pages by name and keyword.</li>
+<li><strong>Themes</strong>: light and dark, following the operating system unless pinned from the sidebar.</li>
 </ul>
 <h3 id="pages">Pages<a class="headerlink" href="#pages" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
 <th>Page</th>
-<th>Description</th>
+<th>What it shows</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Dashboard</strong></td>
-<td>Cluster health, stats (buckets, users, namespaces, S3 requests), services status</td>
+<td><strong>Overview</strong></td>
+<td>Data protection first (clean, rebuilding with what is left, or at risk), then capacity, S3 requests, p99 latency, objects and drives; throughput and latency charts (from Prometheus when configured, else since the page opened); a "Needs attention" list from the cluster's state (groups not clean, drives down, out, draining, unhealthy or near full, rebalancing paused, server errors), each with its fix; capacity by host or drive.</td>
 </tr>
 <tr>
 <td><strong>Buckets</strong></td>
-<td>Create/delete buckets, versioning/lock/lifecycle badges, tenant column</td>
+<td>Filterable table (tenant, pool, versioned, suspended, locked, public) with stored bytes and objects; a details panel for the selected bucket: protection and the pool's health, its settings in plain words, who has access. Create bucket.</td>
 </tr>
 <tr>
-<td><strong>Bucket Detail</strong></td>
-<td>Tabs: Versioning toggle, Object Lock config, Lifecycle rule editor</td>
+<td><strong>Bucket</strong> (<code>/buckets/:name</code>)</td>
+<td>Tabs: <strong>Objects</strong> (the object browser: folders, search, upload, new folder, bulk download and delete, an object's details), <strong>Settings</strong> (versioning, object lock, protection, encryption, replication, delete), <strong>Access</strong> (owner, public access, bucket policy), <strong>Lifecycle</strong> (rules). Old <code>/objects</code> links open the bucket and folder they named.</td>
 </tr>
 <tr>
-<td><strong>Object Browser</strong></td>
-<td>Navigate buckets → folders → files, breadcrumb path, folder/file counts</td>
+<td><strong>Catalog</strong></td>
+<td>Iceberg warehouses and Unity catalogs in one tree. A table shows its snapshots, schema, partitioning, properties, where it lives and who can reach it, with connection snippets for PyIceberg, Spark and Trino; create and delete warehouses, namespaces, catalogs and schemas. Unity's functions, volumes and models are managed in its advanced view, linked from the catalog.</td>
 </tr>
 <tr>
-<td><strong>Cluster</strong></td>
-<td>Unified view of cluster infrastructure via four tabs (all admin-only). Legacy <code>/topology</code>, <code>/drives</code>, <code>/pools</code> URLs redirect here.</td>
+<td><strong>Sharing</strong></td>
+<td>Delta Sharing shares, their tables and recipients; tokens and <code>profile.share</code> files.</td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;→ <strong>Topology</strong></td>
-<td>Interactive, collapsible diagram of region → zone → datacenter → rack → host → OSDs with color-coded level pills. Per-pool placement satisfiability strip. Rebalance banner merges legacy drift + PG-balancer counters.</td>
+<td><strong>Cluster health</strong></td>
+<td>Placement groups by state and pool; what recovery is doing and why it is stuck; drains, rebalancing and scrubs; every drive by rack and host, with drain, mark out and mark in; hosts.</td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;→ <strong>Nodes &amp; Drives</strong></td>
-<td>K8s node grouping → OSD pods → disks, CPU/RAM/OS info, usage bars, Add Host via host-provider.</td>
+<td><strong>Nodes and drives</strong></td>
+<td>Hosts, OSDs and their disks, with tabs for <strong>Topology</strong> (region → zone → datacenter → rack → host → OSD) and <strong>Balancing</strong> (status, pause and resume, tuning). Add a host through the host provider.</td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;→ <strong>Storage Pools</strong></td>
-<td>Protection presets, EC config (RS/LRC/Replication), failure domain, PG count selector on create, PGs column on list. Click PG count → placement drill-down.</td>
+<td><strong>Pools and placement</strong></td>
+<td>Pools with their protection (RS, LRC, replication), failure domain and placement-group count; a pool's placement (<code>/cluster/pools/:name</code>): groups by state, per-OSD membership, scrub a group.</td>
 </tr>
 <tr>
-<td>&nbsp;&nbsp;→ <strong>Balancing</strong></td>
-<td>Live balancer status card (Pause/Resume), 7 hot-reloadable tuning knobs (overload/underload/improvement thresholds, scatter width, per-tick cap, sweep interval, pause).</td>
-</tr>
-<tr>
-<td><strong>Pool Placement</strong> (<code>/cluster/pools/:name</code>)</td>
-<td>Per-pool PG visualization: stat cards, per-OSD PG-membership bars with overload/underload coloring and target line, PG × OSD matrix grid with click-to-filter.</td>
+<td><strong>Performance</strong></td>
+<td>S3, Iceberg and request metrics as charts, from Prometheus or the live scrape.</td>
 </tr>
 <tr>
 <td><strong>Tenants</strong></td>
-<td>Tenant CRUD, quotas, OIDC provider, pool assignment</td>
+<td>Tenants with their quotas, pools, sign-in provider and admins.</td>
 </tr>
 <tr>
-<td><strong>Users &amp; Keys</strong></td>
-<td>Create users with tenant selector, auto-create access keys, credential display</td>
+<td><strong>Users and keys</strong></td>
+<td>Users, service accounts, groups and access keys.</td>
 </tr>
 <tr>
-<td><strong>Identity</strong></td>
-<td>OIDC provider configuration (Azure, Keycloak, Okta, Google, generic)</td>
+<td><strong>Policies</strong></td>
+<td>Named IAM policies, attached to users or groups.</td>
 </tr>
 <tr>
-<td><strong>Tables</strong></td>
-<td>Warehouse → Namespace → Table hierarchy, table metadata viewer</td>
-</tr>
-<tr>
-<td><strong>Table Sharing</strong></td>
-<td>Share/table/recipient CRUD (Delta tables), token + profile.share generation</td>
-</tr>
-<tr>
-<td><strong>Monitoring</strong></td>
-<td>Live Prometheus metrics, charts (line, area, bar), 5s polling</td>
+<td><strong>Sign-in providers</strong></td>
+<td>OIDC providers (Entra ID, Keycloak, Okta, Google, any compliant issuer).</td>
 </tr>
 <tr>
 <td><strong>Encryption</strong></td>
-<td>SSE master-key status, KMS backend selector (Disabled / Local / Vault), hot-swap + Test button</td>
+<td>SSE master-key status and the KMS backend (disabled, local, Vault), with a test.</td>
 </tr>
 </tbody>
 </table>
-<h3 id="ui-design">UI Design<a class="headerlink" href="#ui-design" title="Permanent link">&para;</a></h3>
+<h3 id="design">Design<a class="headerlink" href="#design" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Compact 13px base font (Inter)</li>
-<li>Tailwind CSS styling</li>
-<li>Loading bar animations</li>
-<li>Hover-reveal actions (delete buttons)</li>
-<li>Sticky table headers</li>
-<li>Status badges with colored dots</li>
+<li>Sora for titles and figures, IBM Plex Sans for text (13px base), IBM Plex Mono for identifiers and table headers</li>
+<li>One page layout: title, one line saying what the page holds, actions on the right, then content; details open in a side panel</li>
+<li>Status always carries a word as well as a colour; text meets 4.5:1 contrast in both themes; form fields are labelled for screen readers</li>
 </ul>
 <hr />
 <h1 id="9-infrastructure">9. Infrastructure<a class="headerlink" href="#9-infrastructure" title="Permanent link">&para;</a></h1>
