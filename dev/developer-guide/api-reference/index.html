@@ -3584,8 +3584,13 @@ every call.</p>
 </tr>
 <tr>
 <td>Buckets</td>
-<td><code>/_admin/buckets</code>, <code>/_admin/buckets/{name}/{policy,owner,dedup,objects}</code></td>
+<td><code>/_admin/buckets</code>, <code>/_admin/buckets/{name}/{policy,owner,quota,dedup,objects}</code></td>
 <td><a href="../../operations-guide/administration/s3-api/">S3 ops</a></td>
+</tr>
+<tr>
+<td>Bucket settings</td>
+<td><code>/_admin/buckets/{name}/{versioning,object-lock,encryption,lifecycle,replication}</code></td>
+<td><a href="../../operations-guide/administration/s3-api/#bucket-settings-on-the-admin-api">S3 ops § admin API</a></td>
 </tr>
 <tr>
 <td>Pools, nodes, OSDs, rebalance</td>

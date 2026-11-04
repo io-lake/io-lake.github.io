@@ -2700,6 +2700,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#bucket-settings-on-the-admin-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bucket settings on the admin API
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#s3-select" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3914,6 +3925,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#bucket-settings-on-the-admin-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bucket settings on the admin API
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#s3-select" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -4696,6 +4718,135 @@ is <code>400 AccessControlListNotSupported</code>. See <a href="../iam/#acls">AC
 <h3 id="listobjectversions">ListObjectVersions<a class="headerlink" href="#listobjectversions" title="Permanent link">&para;</a></h3>
 <p>List object versions.</p>
 <div class="highlight"><pre><span></span><code>GET /{bucket}?versions
+</code></pre></div>
+<hr />
+<h2 id="bucket-settings-on-the-admin-api">Bucket settings on the admin API<a class="headerlink" href="#bucket-settings-on-the-admin-api" title="Permanent link">&para;</a></h2>
+<p>A bucket's versioning, Object Lock, default encryption, lifecycle and
+replication can also be read and changed on the admin API, as JSON. The
+console uses these routes: it signs in with a session cookie, which the S3
+path doesn't accept.</p>
+<table>
+<thead>
+<tr>
+<th>Route</th>
+<th>Methods</th>
+<th>S3 equivalent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/_admin/buckets/{name}/versioning</code></td>
+<td><code>GET</code>, <code>PUT</code></td>
+<td><code>?versioning</code></td>
+</tr>
+<tr>
+<td><code>/_admin/buckets/{name}/object-lock</code></td>
+<td><code>GET</code>, <code>PUT</code></td>
+<td><code>?object-lock</code></td>
+</tr>
+<tr>
+<td><code>/_admin/buckets/{name}/encryption</code></td>
+<td><code>GET</code>, <code>PUT</code>, <code>DELETE</code></td>
+<td><code>?encryption</code></td>
+</tr>
+<tr>
+<td><code>/_admin/buckets/{name}/lifecycle</code></td>
+<td><code>GET</code>, <code>PUT</code>, <code>DELETE</code></td>
+<td><code>?lifecycle</code></td>
+</tr>
+<tr>
+<td><code>/_admin/buckets/{name}/replication</code></td>
+<td><code>GET</code>, <code>PUT</code>, <code>DELETE</code></td>
+<td><code>?replication</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Who.</strong> The system admin, for any bucket; a tenant admin, for its own
+tenant's buckets only. A bucket outside any tenant is the system admin's
+alone. This is the rule every per-bucket admin route applies
+(<code>/_admin/buckets/{name}/policy</code>, <code>/owner</code>, <code>/objects</code>). The caller may sign
+with SigV4 or use a console session; a key scoped to a bucket or prefix
+is refused.</p>
+<p><strong>What.</strong> Each body is S3's configuration document as JSON. Element names
+are the ones S3 uses in XML, and a repeated element (<code>Rule</code>, <code>Tag</code>) is an
+array under that name. A setting goes through the same code as its S3 call,
+so S3's checks and limits apply as described above: lifecycle's refusals,
+Object Lock needing versioning, replication needing versioning and an
+existing target.</p>
+<ul>
+<li><code>GET</code> answers <code>200</code> with the document.</li>
+<li><code>PUT</code> takes the document and answers <code>204</code>.</li>
+<li><code>DELETE</code> answers <code>204</code>. S3 has no DELETE for versioning or Object Lock,
+  and neither do these routes.</li>
+</ul>
+<p><strong>Errors</strong> are <code>{"code": "...", "message": "..."}</code>, with the status and
+code S3 gives. A setting the bucket doesn't have is <code>404</code> with S3's code
+for it. A bucket that doesn't exist is <code>404 NoSuchBucket</code>. A body that
+isn't JSON for the setting is <code>400 MalformedJSON</code>. A caller without
+credentials gets <code>401</code>, and a caller who isn't an admin of the bucket's
+tenant gets <code>403 AccessDenied</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Not configured</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>versioning</td>
+<td>never <code>404</code>: a bucket never versioned answers <code>{}</code>, as S3 answers an empty <code>VersioningConfiguration</code></td>
+</tr>
+<tr>
+<td>object-lock</td>
+<td><code>404 ObjectLockConfigurationNotFoundError</code></td>
+</tr>
+<tr>
+<td>encryption</td>
+<td><code>404 ServerSideEncryptionConfigurationNotFoundError</code></td>
+</tr>
+<tr>
+<td>lifecycle</td>
+<td><code>404 NoSuchLifecycleConfiguration</code></td>
+</tr>
+<tr>
+<td>replication</td>
+<td><code>404 ReplicationConfigurationNotFoundError</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Examples.</strong></p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Versioning: {"Status": "Enabled"} or {"Status": "Suspended"}</span>
+curl<span class="w"> </span>-X<span class="w"> </span>PUT<span class="w"> </span>-b<span class="w"> </span><span class="s2">"objectio-session=</span><span class="nv">$SESSION</span><span class="s2">"</span><span class="w"> </span>-H<span class="w"> </span><span class="s1">'Content-Type: application/json'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-d<span class="w"> </span><span class="s1">'{"Status": "Enabled"}'</span><span class="w"> </span>http://localhost:9000/_admin/buckets/photos/versioning
+<span class="c1"># 204</span>
+curl<span class="w"> </span>-b<span class="w"> </span><span class="s2">"objectio-session=</span><span class="nv">$SESSION</span><span class="s2">"</span><span class="w"> </span>http://localhost:9000/_admin/buckets/photos/versioning
+<span class="c1"># {"Status":"Enabled"}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>// PUT /_admin/buckets/photos/object-lock (the bucket must be versioned)
+{"ObjectLockEnabled": "Enabled",
+ "Rule": {"DefaultRetention": {"Mode": "GOVERNANCE", "Days": 7}}}
+
+// PUT /_admin/buckets/photos/encryption
+{"Rule": [{"ApplyServerSideEncryptionByDefault": {"SSEAlgorithm": "AES256"}}]}
+
+// PUT /_admin/buckets/photos/lifecycle
+{"Rule": [{"ID": "expire-logs", "Filter": {"Prefix": "logs/"},
+           "Status": "Enabled", "Expiration": {"Days": 30}}]}
+
+// PUT /_admin/buckets/photos/replication
+{"Rule": [{"ID": "dr", "Status": "Enabled", "Filter": {"Prefix": "docs/"},
+           "DeleteMarkerReplication": {"Status": "Disabled"},
+           "Destination": {"Bucket": "arn:obio:replication:::site-b"}}]}
+</code></pre></div>
+<p>A <code>GET</code> answers the document as stored, in the form S3's <code>GET</code> answers it.
+For example, a replication rule comes back with its filter inside <code>And</code>,
+and its <code>Priority</code> and <code>DeleteMarkerReplication</code> set.</p>
+<p><code>GET /_admin/buckets</code> gives each bucket's Object Lock as <code>object_lock</code>:
+<code>{"enabled": false}</code>, or <code>{"enabled": true}</code> with a <code>default_retention</code>
+(<code>mode</code>, and <code>days</code> or <code>years</code>) when it has one:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"photos"</span><span class="p">,</span><span class="w"> </span><span class="nt">"object_lock"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">"enabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"default_retention"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">"mode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GOVERNANCE"</span><span class="p">,</span><span class="w"> </span><span class="nt">"days"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="p">}},</span><span class="w"> </span><span class="nt">"..."</span><span class="p">:</span><span class="w"> </span><span class="s2">"..."</span><span class="p">}</span>
 </code></pre></div>
 <hr />
 <h2 id="s3-select">S3 Select<a class="headerlink" href="#s3-select" title="Permanent link">&para;</a></h2>
