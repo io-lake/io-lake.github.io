@@ -1,19 +1,51 @@
-/* ObjectIO brand on the docs site (colors from objectio/assets/brand-tokens). */
+/* IOLake brand on the docs site: ink #0e1f26, lake #11666f, lake-light
+   #4cc3b6, paper #f3f6f6; Sora for headings, IBM Plex for text and code
+   (mkdocs.yml). The header is ink in both schemes, so it carries the mark
+   drawn for dark backgrounds. */
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&display=swap");
+
 :root,
 [data-md-color-scheme="default"],
 [data-md-color-scheme="slate"] {
-  --md-primary-fg-color: #0c121a;        /* ink: the header */
-  --md-primary-fg-color--light: #232933; /* graphite */
-  --md-primary-fg-color--dark: #0c121a;
-  --md-primary-bg-color: #f5f7f9;        /* paper: text on the header */
-  --md-accent-fg-color: #fc9f30;         /* parity */
+  --md-primary-fg-color: #0e1f26;        /* ink: the header */
+  --md-primary-fg-color--light: #11666f; /* lake */
+  --md-primary-fg-color--dark: #0e1f26;
+  --md-primary-bg-color: #f3f6f6;        /* paper: text on the header */
+  --md-primary-bg-color--light: rgba(243, 246, 246, 0.7);
 }
 [data-md-color-scheme="default"] {
-  --md-typeset-a-color: #0077c7;         /* data-deep */
+  --md-typeset-a-color: #11666f;         /* lake: 6.6:1 on white */
+  --md-accent-fg-color: #2a9d8f;
+  --md-accent-fg-color--transparent: rgba(42, 157, 143, 0.1);
 }
 [data-md-color-scheme="slate"] {
-  --md-typeset-a-color: #249ff3;         /* data */
+  --md-hue: 195;                         /* the slate background, toward ink */
+  --md-typeset-a-color: #4cc3b6;         /* lake-light */
+  --md-accent-fg-color: #7fd8ce;
+  --md-accent-fg-color--transparent: rgba(76, 195, 182, 0.1);
+}
+
+.md-header__title,
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3 {
+  font-family: "Sora", var(--md-text-font-family), sans-serif;
 }
 .md-header__title {
   font-weight: 600;
+}
+.md-typeset h1 {
+  font-weight: 600;
+}
+.md-typeset h2,
+.md-typeset h3 {
+  font-weight: 500;
+}
+
+/* The wordmark, the landing page's heading: one image per scheme
+   (#only-light, #only-dark), sized to the column. */
+.md-typeset img.iolake-wordmark {
+  width: 15rem;
+  max-width: 70%;
+  margin: -1.5rem 0 -1.5rem -0.9rem;     /* the drawing's own margins */
 }

@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://object-io.github.io/dev/operations-guide/administration/mtls/">
+        <link rel="canonical" href="https://iolake.dev/dev/operations-guide/administration/mtls/">
       
       
         <link rel="prev" href="../iceberg-api/">
@@ -20,12 +20,12 @@
         
       
       
-      <link rel="icon" href="../../../assets/brand/favicon.svg">
+      <link rel="icon" href="../../../assets/brand/iolake-favicon.svg">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
     
     
       
-        <title>Mutual TLS between the services - ObjectIO</title>
+        <title>Mutual TLS between the services - IOLake</title>
       
     
     
@@ -71,7 +71,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -100,9 +100,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="ObjectIO" class="md-header__button md-logo" aria-label="ObjectIO" data-md-component="logo">
+    <a href="../../.." title="IOLake" class="md-header__button md-logo" aria-label="IOLake" data-md-component="logo">
       
-  <img src="../../../assets/brand/objectio-mark-on-dark.svg" alt="logo">
+  <img src="../../../assets/brand/iolake-mark-dark.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -113,7 +113,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            ObjectIO
+            IOLake
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -132,7 +132,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Dark mode"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Dark mode"  type="radio" name="__palette" id="__palette_0">
     
       <label class="md-header__button md-icon" title="Dark mode" for="__palette_1" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
@@ -142,7 +142,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Light mode"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Light mode"  type="radio" name="__palette" id="__palette_1">
     
       <label class="md-header__button md-icon" title="Light mode" for="__palette_0" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
@@ -199,13 +199,13 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/object-io/objectio" title="Go to repository" class="md-source" data-md-component="source">
+        <a href="https://github.com/io-lake/iolake" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
   </div>
   <div class="md-source__repository">
-    object-io/objectio
+    io-lake/iolake
   </div>
 </a>
       </div>
@@ -235,22 +235,22 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="ObjectIO" class="md-nav__button md-logo" aria-label="ObjectIO" data-md-component="logo">
+    <a href="../../.." title="IOLake" class="md-nav__button md-logo" aria-label="IOLake" data-md-component="logo">
       
-  <img src="../../../assets/brand/objectio-mark-on-dark.svg" alt="logo">
+  <img src="../../../assets/brand/iolake-mark-dark.svg" alt="logo">
 
     </a>
-    ObjectIO
+    IOLake
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/object-io/objectio" title="Go to repository" class="md-source" data-md-component="source">
+      <a href="https://github.com/io-lake/iolake" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
   </div>
   <div class="md-source__repository">
-    object-io/objectio
+    io-lake/iolake
   </div>
 </a>
     </div>
@@ -271,7 +271,7 @@
   <span class="md-ellipsis">
     
   
-    ObjectIO
+    IOLake
   
 
     
@@ -298,7 +298,7 @@
   <span class="md-ellipsis">
     
   
-    ObjectIO roadmap
+    IOLake roadmap
   
 
     
@@ -325,7 +325,7 @@
   <span class="md-ellipsis">
     
   
-    ObjectIO features
+    IOLake features
   
 
     
@@ -515,7 +515,7 @@
   <span class="md-ellipsis">
     
   
-    ObjectIO — Feature Reference
+    IOLake — Feature Reference
   
 
     
@@ -895,7 +895,7 @@
   <span class="md-ellipsis">
     
   
-    ceph s3-tests against ObjectIO, run 2
+    ceph s3-tests against IOLake, run 2
   
 
     
@@ -1712,6 +1712,148 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_8_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_8_8" id="__nav_5_8_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2026 11 05
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_8_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_8_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    2026 11 05
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_8_8_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_8_8_1" id="__nav_5_8_8_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Linux amd64
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_5_8_8_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_8_8_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Linux amd64
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developer-guide/s3-compatibility/2026-11-05/linux-amd64/summary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ceph s3-tests results
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1986,7 +2128,7 @@
   <span class="md-ellipsis">
     
   
-    CLI (obioctl)
+    CLI (iolakectl)
   
 
     
@@ -2475,7 +2617,7 @@
   <span class="md-ellipsis">
     
   
-    ObjectIO Deployment Options
+    IOLake Deployment Options
   
 
     
@@ -2896,7 +3038,7 @@
   <span class="md-ellipsis">
     
   
-    Running ObjectIO in production
+    Running IOLake in production
   
 
     
@@ -3192,7 +3334,7 @@
 
 
 <h1 id="mutual-tls-between-the-services">Mutual TLS between the services<a class="headerlink" href="#mutual-tls-between-the-services" title="Permanent link">&para;</a></h1>
-<p>With mTLS on, every gRPC hop between ObjectIO's components runs over
+<p>With mTLS on, every gRPC hop between IOLake's components runs over
 mutual TLS, and each side proves it holds a certificate signed by the
 cluster's CA:</p>
 <ul>
@@ -3201,7 +3343,7 @@ cluster's CA:</p>
 <li>meta to meta, including Raft;</li>
 <li>meta to the OSDs (liveness, repair, drain);</li>
 <li>block gateway to meta and to the OSDs;</li>
-<li><code>obioctl</code> to the block gateway (<code>volume</code>, <code>snapshot</code>).</li>
+<li><code>iolakectl</code> to the block gateway (<code>volume</code>, <code>snapshot</code>).</li>
 </ul>
 <p>A peer without such a certificate is refused when it connects: a plaintext
 client, a TLS client with no certificate, or one with a certificate from
@@ -3230,7 +3372,7 @@ meta's admin port (9102) can add a Raft member and be sent all the
 metadata. Each node says so in its log when it starts.</p>
 <p>That is fine for development and for the all-in-one on a laptop, which
 keeps its internal ports on loopback. Anywhere else, turn mTLS on, or run
-on a network that only ObjectIO's own nodes can reach (on Kubernetes the
+on a network that only IOLake's own nodes can reach (on Kubernetes the
 chart's <a href="../../installation/kubernetes/#networkpolicy">network policies</a>,
 on by default; elsewhere a firewall) and keep it that way. The ports are
 in the <a href="../../installation/#default-ports-cluster-convention">installation guide</a>.</p>
@@ -3267,7 +3409,7 @@ in the <a href="../../installation/#default-ports-cluster-convention">installati
 </tr>
 <tr>
 <td><code>admin</code></td>
-<td>operators: <code>obioctl</code>'s block commands, the Helm Raft bootstrap Job, <code>objectio-install cluster init</code></td>
+<td>operators: <code>iolakectl</code>'s block commands, the Helm Raft bootstrap Job, <code>iolake-install cluster init</code></td>
 <td>the block gateway's gRPC (volumes, snapshots); changing Raft membership on meta's admin port</td>
 </tr>
 </tbody>
@@ -3291,22 +3433,22 @@ variables:</p>
 <tbody>
 <tr>
 <td><code>--tls-cert</code></td>
-<td><code>OBJECTIO_TLS_CERT</code></td>
+<td><code>IOLAKE_TLS_CERT</code></td>
 <td>This node's certificate (PEM), naming its role. It is presented both as a server and as a client.</td>
 </tr>
 <tr>
 <td><code>--tls-key</code></td>
-<td><code>OBJECTIO_TLS_KEY</code></td>
+<td><code>IOLAKE_TLS_KEY</code></td>
 <td>Its private key (PEM)</td>
 </tr>
 <tr>
 <td><code>--tls-ca</code></td>
-<td><code>OBJECTIO_TLS_CA</code></td>
+<td><code>IOLAKE_TLS_CA</code></td>
 <td>The CA (PEM) that signs every node's certificate. It is the only CA trusted.</td>
 </tr>
 </tbody>
 </table>
-<p>The three go together. <code>objectio-aio</code> takes them too: its own internal
+<p>The three go together. <code>iolake-aio</code> takes them too: its own internal
 hops then use mTLS, and meta's admin port inside it is HTTPS.</p>
 <p>A server's certificate must name every address peers dial it by: the
 addresses registered as <code>--advertise-addr</code> (OSDs), <code>--raft-advertise</code>
@@ -3321,7 +3463,7 @@ once.</p>
 <p>With a CA of your own (<code>ca.pem</code>, <code>ca.key</code>), one certificate per role; the
 OSDs', for example:</p>
 <div class="highlight"><pre><span></span><code>openssl<span class="w"> </span>req<span class="w"> </span>-new<span class="w"> </span>-newkey<span class="w"> </span>ec<span class="w"> </span>-pkeyopt<span class="w"> </span>ec_paramgen_curve:P-256<span class="w"> </span>-nodes<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-keyout<span class="w"> </span>osd.key<span class="w"> </span>-subj<span class="w"> </span><span class="s2">"/CN=objectio-osd"</span><span class="w"> </span>-out<span class="w"> </span>osd.csr
+<span class="w">  </span>-keyout<span class="w"> </span>osd.key<span class="w"> </span>-subj<span class="w"> </span><span class="s2">"/CN=iolake-osd"</span><span class="w"> </span>-out<span class="w"> </span>osd.csr
 openssl<span class="w"> </span>x509<span class="w"> </span>-req<span class="w"> </span>-in<span class="w"> </span>osd.csr<span class="w"> </span>-CA<span class="w"> </span>ca.pem<span class="w"> </span>-CAkey<span class="w"> </span>ca.key<span class="w"> </span>-CAcreateserial<span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>-days<span class="w"> </span><span class="m">365</span><span class="w"> </span>-out<span class="w"> </span>osd.pem<span class="w"> </span>-extfile<span class="w"> </span>&lt;<span class="o">(</span><span class="nb">printf</span><span class="w"> </span><span class="s1">'%s\n'</span><span class="w"> </span><span class="se">\</span>
 <span class="w">  </span><span class="s2">"subjectAltName=URI:spiffe://objectio/osd,DNS:osd1.example.internal,DNS:osd2.example.internal,IP:127.0.0.1"</span><span class="w"> </span><span class="se">\</span>
@@ -3358,7 +3500,7 @@ checked for each call:</p>
 otherwise (node ids, their Raft addresses, the term and log index), and
 operators and their scripts read it without an admin certificate.</p>
 <p>The port binds the host meta's gRPC listens on (<code>--listen</code>), or
-<code>--admin-host</code>. <code>objectio-install cluster init</code> forms the group over it
+<code>--admin-host</code>. <code>iolake-install cluster init</code> forms the group over it
 with <code>--tls-cert</code>, <code>--tls-key</code> and <code>--tls-ca</code>, an <code>admin</code> certificate
 (<a href="../../installation/linux/">Linux</a>); the chart's bootstrap Job with the
 <code>admin</code> Secret, and meta's probes ask over HTTPS (<code>scheme: HTTPS</code>).</p>
@@ -3370,9 +3512,9 @@ gets the <code>admin</code> one.</p>
 <div class="highlight"><pre><span></span><code><span class="nt">tls</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">  </span><span class="c1"># Either name a cert-manager CA issuer, and the chart requests the</span>
-<span class="w">  </span><span class="c1"># certificates (Secrets &lt;release&gt;-objectio-tls-&lt;role&gt;):</span>
+<span class="w">  </span><span class="c1"># certificates (Secrets &lt;release&gt;-iolake-tls-&lt;role&gt;):</span>
 <span class="w">  </span><span class="nt">certManager</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">issuerRef</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="nv">objectio-ca</span><span class="p p-Indicator">,</span><span class="nt"> kind</span><span class="p">:</span><span class="w"> </span><span class="nv">Issuer</span><span class="p p-Indicator">}</span>
+<span class="w">    </span><span class="nt">issuerRef</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="nv">iolake-ca</span><span class="p p-Indicator">,</span><span class="nt"> kind</span><span class="p">:</span><span class="w"> </span><span class="nv">Issuer</span><span class="p p-Indicator">}</span>
 <span class="w">  </span><span class="c1"># or create the Secrets yourself (tls.crt, tls.key and ca.crt each),</span>
 <span class="w">  </span><span class="c1"># one per role, and name them:</span>
 <span class="w">  </span><span class="c1"># secrets:</span>
@@ -3386,29 +3528,29 @@ gets the <code>admin</code> one.</p>
 each certificate. A minimal one, with cert-manager installed:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cert-manager.io/v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Issuer</span>
-<span class="nt">metadata</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="nv">objectio-selfsigned</span><span class="p p-Indicator">}</span>
+<span class="nt">metadata</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="nv">iolake-selfsigned</span><span class="p p-Indicator">}</span>
 <span class="nt">spec</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt">selfSigned</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}}</span>
 <span class="nn">---</span>
 <span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cert-manager.io/v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Certificate</span>
-<span class="nt">metadata</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="nv">objectio-ca</span><span class="p p-Indicator">}</span>
+<span class="nt">metadata</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="nv">iolake-ca</span><span class="p p-Indicator">}</span>
 <span class="nt">spec</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">isCA</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-<span class="w">  </span><span class="nt">commonName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objectio-ca</span>
-<span class="w">  </span><span class="nt">secretName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">objectio-ca</span>
-<span class="w">  </span><span class="nt">issuerRef</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="nv">objectio-selfsigned</span><span class="p p-Indicator">,</span><span class="nt"> kind</span><span class="p">:</span><span class="w"> </span><span class="nv">Issuer</span><span class="p p-Indicator">}</span>
+<span class="w">  </span><span class="nt">commonName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">iolake-ca</span>
+<span class="w">  </span><span class="nt">secretName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">iolake-ca</span>
+<span class="w">  </span><span class="nt">issuerRef</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="nv">iolake-selfsigned</span><span class="p p-Indicator">,</span><span class="nt"> kind</span><span class="p">:</span><span class="w"> </span><span class="nv">Issuer</span><span class="p p-Indicator">}</span>
 <span class="nn">---</span>
 <span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cert-manager.io/v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Issuer</span>
-<span class="nt">metadata</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="nv">objectio-ca</span><span class="p p-Indicator">}</span>
-<span class="nt">spec</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt">ca</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt">secretName</span><span class="p">:</span><span class="w"> </span><span class="nv">objectio-ca</span><span class="p p-Indicator">}}</span>
+<span class="nt">metadata</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="nv">iolake-ca</span><span class="p p-Indicator">}</span>
+<span class="nt">spec</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt">ca</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt">secretName</span><span class="p">:</span><span class="w"> </span><span class="nv">iolake-ca</span><span class="p p-Indicator">}}</span>
 </code></pre></div>
 <h2 id="upgrading-from-a-release-whose-certificates-name-no-role">Upgrading from a release whose certificates name no role<a class="headerlink" href="#upgrading-from-a-release-whose-certificates-name-no-role" title="Permanent link">&para;</a></h2>
 <p>A release before roles used one certificate, naming none, for every
 component. During the rolling upgrade, while the cluster's format level
 is still the previous release's, a certificate naming no role is taken
 for any role, so the nodes not yet upgraded keep working. Once the
-upgrade is finalized (<code>obioctl upgrade finalize</code>), such a certificate is
+upgrade is finalized (<code>iolakectl upgrade finalize</code>), such a certificate is
 refused everything. The chart's upgrade issues the per-role certificates
 and rolls each component onto its own; with certificates of your own,
 reissue them with roles before finalizing. Then delete the old shared
@@ -3418,8 +3560,8 @@ certificate and its Secret.</p>
 Secrets 30 days before the certificates expire, and the chart's default
 lifetime is one year. After a renewal, restart the components one at a
 time so they pick up the new certificates:</p>
-<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>rollout<span class="w"> </span>restart<span class="w"> </span>statefulset/&lt;release&gt;-objectio-meta<span class="w"> </span>statefulset/&lt;release&gt;-objectio-osd<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>deployment/&lt;release&gt;-objectio-gateway
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>rollout<span class="w"> </span>restart<span class="w"> </span>statefulset/&lt;release&gt;-iolake-meta<span class="w"> </span>statefulset/&lt;release&gt;-iolake-osd<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>deployment/&lt;release&gt;-iolake-gateway
 </code></pre></div>
 <p>Picking up a renewed certificate without a restart is planned.</p>
 <h2 id="how-its-tested">How it's tested<a class="headerlink" href="#how-its-tested" title="Permanent link">&para;</a></h2>
@@ -3437,7 +3579,7 @@ gets a test CA's certificate for its role. Tests check that:</p>
 <li>meta's admin port refuses plain HTTP, and <code>/init</code> and membership
   changes from a client with no certificate or another role's, while
   <code>/status</code>, <code>/health</code> and <code>/ready</code> answer a client with no certificate;</li>
-<li><code>objectio-install cluster init</code> forms nothing without a certificate or
+<li><code>iolake-install cluster init</code> forms nothing without a certificate or
   with another role's, and forms the group with an <code>admin</code> one;</li>
 <li>the all-in-one, serving S3 on every interface, keeps every other port
   on loopback.</li>
@@ -3451,7 +3593,7 @@ certificate to the call, that a peer silent or stopped part way through
 its handshake is disconnected while others are served, and that
 connecting to a server that never answers the handshake fails at the
 connect timeout. The rolling-upgrade test
-runs plain. <code>OBJECTIO_E2E_PLAIN=1</code> runs the whole suite plain; the mTLS
+runs plain. <code>IOLAKE_E2E_PLAIN=1</code> runs the whole suite plain; the mTLS
 tests then fail, since they have nothing to test.</p>
 
 
