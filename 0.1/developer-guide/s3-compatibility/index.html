@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://object-io.github.io/0.1/developer-guide/s3-compatibility/">
+        <link rel="canonical" href="https://iolake.dev/0.1/developer-guide/s3-compatibility/">
       
       
         <link rel="prev" href="../performance/profiling/">
@@ -20,19 +20,19 @@
         
       
       
-      <link rel="icon" href="../../assets/brand/favicon.svg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <link rel="icon" href="../../assets/brand/iolake-favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
     
     
       
-        <title>S3 compatibility: ceph s3-tests - ObjectIO</title>
+        <title>S3 compatibility: ceph s3-tests - IOLake</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -71,7 +71,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -100,9 +100,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="ObjectIO" class="md-header__button md-logo" aria-label="ObjectIO" data-md-component="logo">
+    <a href="../.." title="IOLake" class="md-header__button md-logo" aria-label="IOLake" data-md-component="logo">
       
-  <img src="../../assets/brand/objectio-mark-on-dark.svg" alt="logo">
+  <img src="../../assets/brand/iolake-mark-dark.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -113,7 +113,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            ObjectIO
+            IOLake
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -132,7 +132,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Dark mode"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Dark mode"  type="radio" name="__palette" id="__palette_0">
     
       <label class="md-header__button md-icon" title="Dark mode" for="__palette_1" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
@@ -142,7 +142,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Light mode"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Light mode"  type="radio" name="__palette" id="__palette_1">
     
       <label class="md-header__button md-icon" title="Light mode" for="__palette_0" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
@@ -199,13 +199,13 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/object-io/objectio" title="Go to repository" class="md-source" data-md-component="source">
+        <a href="https://github.com/io-lake/iolake" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
   </div>
   <div class="md-source__repository">
-    object-io/objectio
+    io-lake/iolake
   </div>
 </a>
       </div>
@@ -235,22 +235,22 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="ObjectIO" class="md-nav__button md-logo" aria-label="ObjectIO" data-md-component="logo">
+    <a href="../.." title="IOLake" class="md-nav__button md-logo" aria-label="IOLake" data-md-component="logo">
       
-  <img src="../../assets/brand/objectio-mark-on-dark.svg" alt="logo">
+  <img src="../../assets/brand/iolake-mark-dark.svg" alt="logo">
 
     </a>
-    ObjectIO
+    IOLake
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/object-io/objectio" title="Go to repository" class="md-source" data-md-component="source">
+      <a href="https://github.com/io-lake/iolake" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
   </div>
   <div class="md-source__repository">
-    object-io/objectio
+    io-lake/iolake
   </div>
 </a>
     </div>
@@ -271,7 +271,7 @@
   <span class="md-ellipsis">
     
   
-    ObjectIO
+    IOLake
   
 
     
@@ -298,7 +298,7 @@
   <span class="md-ellipsis">
     
   
-    ObjectIO roadmap
+    IOLake roadmap
   
 
     
@@ -325,7 +325,7 @@
   <span class="md-ellipsis">
     
   
-    ObjectIO features
+    IOLake features
   
 
     
@@ -517,7 +517,7 @@
   <span class="md-ellipsis">
     
   
-    ObjectIO — Feature Reference
+    IOLake — Feature Reference
   
 
     
@@ -875,15 +875,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#latest-2026-10-23-010-rc3" class="md-nav__link">
+  <a href="#latest-2026-11-05-010-rc4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Latest: 2026-10-23 (0.1.0-rc.3)
+        Latest: 2026-11-05 (0.1.0-rc.4)
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Latest: 2026-10-23 (0.1.0-rc.3)">
+    <nav class="md-nav" aria-label="Latest: 2026-11-05 (0.1.0-rc.4)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -996,7 +996,7 @@
   <span class="md-ellipsis">
     
   
-    ceph s3-tests against ObjectIO, run 2
+    ceph s3-tests against IOLake, run 2
   
 
     
@@ -1813,6 +1813,148 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_8_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_8_8" id="__nav_5_8_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2026 11 05
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_8_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_8_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    2026 11 05
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_8_8_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_8_8_1" id="__nav_5_8_8_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Linux amd64
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_5_8_8_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_8_8_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Linux amd64
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="2026-11-05/linux-amd64/summary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ceph s3-tests results
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2083,7 +2225,7 @@
   <span class="md-ellipsis">
     
   
-    CLI (obioctl)
+    CLI (iolakectl)
   
 
     
@@ -2420,7 +2562,7 @@
   <span class="md-ellipsis">
     
   
-    ObjectIO Deployment Options
+    IOLake Deployment Options
   
 
     
@@ -2841,7 +2983,7 @@
   <span class="md-ellipsis">
     
   
-    Running ObjectIO in production
+    Running IOLake in production
   
 
     
@@ -3012,15 +3154,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#latest-2026-10-23-010-rc3" class="md-nav__link">
+  <a href="#latest-2026-11-05-010-rc4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Latest: 2026-10-23 (0.1.0-rc.3)
+        Latest: 2026-11-05 (0.1.0-rc.4)
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Latest: 2026-10-23 (0.1.0-rc.3)">
+    <nav class="md-nav" aria-label="Latest: 2026-11-05 (0.1.0-rc.4)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -3082,21 +3224,21 @@
 
 
 <h1 id="s3-compatibility-ceph-s3-tests">S3 compatibility: ceph s3-tests<a class="headerlink" href="#s3-compatibility-ceph-s3-tests" title="Permanent link">&para;</a></h1>
-<p>ObjectIO is tested against <a href="https://github.com/ceph/s3-tests">ceph/s3-tests</a>,
+<p>IOLake is tested against <a href="https://github.com/ceph/s3-tests">ceph/s3-tests</a>,
 the S3 compatibility suite RGW is built against: 1053 tests. Each run is in a
 dated folder here, with every test's outcome and, for each failure, why it
 fails.</p>
-<h2 id="latest-2026-10-23-010-rc3">Latest: 2026-10-23 (0.1.0-rc.3)<a class="headerlink" href="#latest-2026-10-23-010-rc3" title="Permanent link">&para;</a></h2>
+<h2 id="latest-2026-11-05-010-rc4">Latest: 2026-11-05 (0.1.0-rc.4)<a class="headerlink" href="#latest-2026-11-05-010-rc4" title="Permanent link">&para;</a></h2>
 <p><strong>Passes 681 of 687 applicable tests on Linux x86_64, and 679 on Linux
 arm64.</strong> The 6 that don't pass on x86_64 are the gaps below, test for
-test as on 0.1.0-rc.2: no test passes or fails that didn't before. On arm64,
+test as on 0.1.0-rc.3: no test passes or fails that didn't before. On arm64,
 run on 0.1.0-rc.1, the same 6 gaps, and 2 tests that fail only when run
 in parallel (below); none is a bug.</p>
 <table>
 <thead>
 <tr>
 <th>Platform</th>
-<th>ObjectIO</th>
+<th>IOLake</th>
 <th>Summary</th>
 <th>Every test</th>
 </tr>
@@ -3104,9 +3246,9 @@ in parallel (below); none is a bug.</p>
 <tbody>
 <tr>
 <td>Linux x86_64 (NVMe)</td>
-<td>0.1.0-rc.3</td>
-<td><a href="2026-10-23/linux-amd64/summary/">summary</a></td>
-<td><a href="2026-10-23/linux-amd64/results.csv">results.csv</a></td>
+<td>0.1.0-rc.4</td>
+<td><a href="2026-11-05/linux-amd64/summary/">summary</a></td>
+<td><a href="2026-11-05/linux-amd64/results.csv">results.csv</a></td>
 </tr>
 <tr>
 <td>Linux arm64 (Ubuntu 24.04 VM on Apple silicon)</td>
@@ -3116,13 +3258,13 @@ in parallel (below); none is a bug.</p>
 </tr>
 </tbody>
 </table>
-<p>s3-tests <code>5522d1c</code>, now 1057 tests; a debug <code>objectio-aio</code> (6 OSDs, 4+2
+<p>s3-tests <code>5522d1c</code>, now 1057 tests; a debug <code>iolake-aio</code> (6 OSDs, 4+2
 erasure coding, auth on), fresh for the run. arm64 ran on 2026-10-18,
 on the tagged 0.1.0-rc.1; its 1057 tests fall into the same groups below,
 test for test, apart from the three named at the end.</p>
 <h3 id="applicable-and-not">Applicable, and not<a class="headerlink" href="#applicable-and-not" title="Permanent link">&para;</a></h3>
 <p>A test is applicable when it isn't skipped and doesn't fail for a reason
-that isn't ObjectIO's to fix. Of the 1057:</p>
+that isn't IOLake's to fix. Of the 1057:</p>
 <table>
 <thead>
 <tr>
@@ -3153,7 +3295,7 @@ that isn't ObjectIO's to fix. Of the 1057:</p>
 <td>27 need a web-identity provider for STS; 6 expect RGW's tenant-less IAM ARNs; the rest are the suite's own assumptions (botocore re-signing a header the test removed, a header on the wrong client, a leftover bucket, virtual-host DNS)</td>
 </tr>
 <tr>
-<td>ObjectIO does what AWS does</td>
+<td>IOLake does what AWS does</td>
 <td style="text-align: right;">48</td>
 <td>the test expects RGW's behaviour instead (owner display names, how bucket logs name a copy or a batch delete, <code>&lt;And&gt;</code> in lifecycle filters, <code>NoSuchBucketPolicy</code>, S3 Select's AWS output, …)</td>
 </tr>
@@ -3223,6 +3365,12 @@ passed, but its teardown failed. It lists buckets as the suite's second
 user while another test, running at the same time, denies that user
 ListBuckets for a few seconds (<code>test_deny_bucket_actions_in_user_policy</code>).
 Run alone, it passes with its teardown, as it did in the runs since.</p>
+<p>On x86_64 for 0.1.0-rc.4, a first run failed
+<code>test_sts::test_get_caller_identity_non_root_user</code> with
+<code>EntityAlreadyExists</code>: it and <code>test_get_caller_identity_after_assume_role</code>
+both create the IAM user <code>s3-tests-MyUser</code>, and on parallel workers the two
+collide. Alone or with one worker it passes; the published run is the
+second, where it passed.</p>
 <p>On arm64 that test passed, and two others failed only in the parallel
 run; run alone, each passed three times out of three:</p>
 <ul>
@@ -3234,7 +3382,7 @@ run; run alone, each passed three times out of three:</p>
   landed inside its wait.</li>
 </ul>
 <h2 id="running-it">Running it<a class="headerlink" href="#running-it" title="Permanent link">&para;</a></h2>
-<p>From the objectio repo, on Linux (on a Mac, inside a Linux VM or
+<p>From the iolake repo, on Linux (on a Mac, inside a Linux VM or
 container: native macOS syncs are far slower, and its timings mean
 nothing):</p>
 <div class="highlight"><pre><span></span><code>scripts/s3-tests/run.sh<span class="w">                                    </span><span class="c1"># about 10 minutes</span>
@@ -3250,7 +3398,7 @@ there.</p>
 <thead>
 <tr>
 <th>Date</th>
-<th>ObjectIO</th>
+<th>IOLake</th>
 <th style="text-align: right;">Applicable passed</th>
 <th style="text-align: right;">Passed</th>
 <th style="text-align: right;">Failed</th>
@@ -3258,6 +3406,14 @@ there.</p>
 </tr>
 </thead>
 <tbody>
+<tr>
+<td><a href="2026-11-05/linux-amd64/summary/">2026-11-05</a></td>
+<td>0.1.0-rc.4, Linux x86_64</td>
+<td style="text-align: right;">681 of 687</td>
+<td style="text-align: right;">681</td>
+<td style="text-align: right;">280 (+4 errors)</td>
+<td style="text-align: right;">92</td>
+</tr>
 <tr>
 <td><a href="2026-10-23/linux-amd64/summary/">2026-10-23</a></td>
 <td>0.1.0-rc.3, Linux x86_64</td>
@@ -3371,10 +3527,10 @@ there.</p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.top", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "dev", "provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.top", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "dev", "provider": "mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c21346df.min.js"></script>
       
         <script src="../../operations-guide/installation/sizing-calculator.js"></script>
       

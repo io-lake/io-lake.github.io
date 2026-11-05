@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://object-io.github.io/0.1/operations-guide/operations/metrics/">
+        <link rel="canonical" href="https://iolake.dev/0.1/operations-guide/operations/metrics/">
       
       
         <link rel="prev" href="../meta-ha/">
@@ -20,19 +20,19 @@
         
       
       
-      <link rel="icon" href="../../../assets/brand/favicon.svg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <link rel="icon" href="../../../assets/brand/iolake-favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
     
     
       
-        <title>Metrics reference - ObjectIO</title>
+        <title>Metrics reference - IOLake</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -71,7 +71,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -100,9 +100,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="ObjectIO" class="md-header__button md-logo" aria-label="ObjectIO" data-md-component="logo">
+    <a href="../../.." title="IOLake" class="md-header__button md-logo" aria-label="IOLake" data-md-component="logo">
       
-  <img src="../../../assets/brand/objectio-mark-on-dark.svg" alt="logo">
+  <img src="../../../assets/brand/iolake-mark-dark.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -113,7 +113,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            ObjectIO
+            IOLake
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -132,7 +132,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Dark mode"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Dark mode"  type="radio" name="__palette" id="__palette_0">
     
       <label class="md-header__button md-icon" title="Dark mode" for="__palette_1" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
@@ -142,7 +142,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Light mode"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Light mode"  type="radio" name="__palette" id="__palette_1">
     
       <label class="md-header__button md-icon" title="Light mode" for="__palette_0" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
@@ -199,13 +199,13 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/object-io/objectio" title="Go to repository" class="md-source" data-md-component="source">
+        <a href="https://github.com/io-lake/iolake" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
   </div>
   <div class="md-source__repository">
-    object-io/objectio
+    io-lake/iolake
   </div>
 </a>
       </div>
@@ -235,22 +235,22 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="ObjectIO" class="md-nav__button md-logo" aria-label="ObjectIO" data-md-component="logo">
+    <a href="../../.." title="IOLake" class="md-nav__button md-logo" aria-label="IOLake" data-md-component="logo">
       
-  <img src="../../../assets/brand/objectio-mark-on-dark.svg" alt="logo">
+  <img src="../../../assets/brand/iolake-mark-dark.svg" alt="logo">
 
     </a>
-    ObjectIO
+    IOLake
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/object-io/objectio" title="Go to repository" class="md-source" data-md-component="source">
+      <a href="https://github.com/io-lake/iolake" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
   </div>
   <div class="md-source__repository">
-    object-io/objectio
+    io-lake/iolake
   </div>
 </a>
     </div>
@@ -271,7 +271,7 @@
   <span class="md-ellipsis">
     
   
-    ObjectIO
+    IOLake
   
 
     
@@ -298,7 +298,7 @@
   <span class="md-ellipsis">
     
   
-    ObjectIO roadmap
+    IOLake roadmap
   
 
     
@@ -325,7 +325,7 @@
   <span class="md-ellipsis">
     
   
-    ObjectIO features
+    IOLake features
   
 
     
@@ -515,7 +515,7 @@
   <span class="md-ellipsis">
     
   
-    ObjectIO — Feature Reference
+    IOLake — Feature Reference
   
 
     
@@ -895,7 +895,7 @@
   <span class="md-ellipsis">
     
   
-    ceph s3-tests against ObjectIO, run 2
+    ceph s3-tests against IOLake, run 2
   
 
     
@@ -1712,6 +1712,148 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_8_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_8_8" id="__nav_5_8_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2026 11 05
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_8_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_8_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    2026 11 05
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_8_8_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_8_8_1" id="__nav_5_8_8_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Linux amd64
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_5_8_8_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_8_8_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Linux amd64
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developer-guide/s3-compatibility/2026-11-05/linux-amd64/summary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ceph s3-tests results
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1984,7 +2126,7 @@
   <span class="md-ellipsis">
     
   
-    CLI (obioctl)
+    CLI (iolakectl)
   
 
     
@@ -2321,7 +2463,7 @@
   <span class="md-ellipsis">
     
   
-    ObjectIO Deployment Options
+    IOLake Deployment Options
   
 
     
@@ -3017,7 +3159,7 @@
   <span class="md-ellipsis">
     
   
-    Running ObjectIO in production
+    Running IOLake in production
   
 
     
@@ -3434,12 +3576,12 @@
 
 
 <h1 id="metrics-reference">Metrics reference<a class="headerlink" href="#metrics-reference" title="Permanent link">&para;</a></h1>
-<p>Every Prometheus metric ObjectIO exports: where it comes from, what it
+<p>Every Prometheus metric IOLake exports: where it comes from, what it
 means, and the alerts worth setting on it. For dashboards, Prometheus
 setup and the console's views of these metrics, see
 <a href="../monitoring/">Monitoring</a>.</p>
 <p>All metrics are plain Prometheus text exposition. Names start with
-<code>objectio_</code> (and <code>process_</code> for the standard process family).</p>
+<code>iolake_</code> (and <code>process_</code> for the standard process family).</p>
 <h2 id="where-to-scrape">Where to scrape<a class="headerlink" href="#where-to-scrape" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
@@ -3487,8 +3629,8 @@ of gateways. The chart's Prometheus scrapes meta on 9101 and the OSDs on
 9201 directly.</p>
 <p>Do not do both. Scraping a re-exporting gateway and the OSDs and meta
 directly counts every OSD and meta series twice.</p>
-<p>Series the gateway derives from its own poll (<code>objectio_cluster_*</code>,
-<code>objectio_osd_capacity_bytes</code>, the usage and data-safety families) exist
+<p>Series the gateway derives from its own poll (<code>iolake_cluster_*</code>,
+<code>iolake_osd_capacity_bytes</code>, the usage and data-safety families) exist
 once per gateway. With several gateways, aggregate them with <code>max</code>, not
 <code>sum</code>.</p>
 <h2 id="conventions">Conventions<a class="headerlink" href="#conventions" title="Permanent link">&para;</a></h2>
@@ -3504,7 +3646,7 @@ once per gateway. With several gateways, aggregate them with <code>max</code>, n
   Iceberg, Unity, lifecycle and drain families need those features in use.
   Absent is not the same as zero.</li>
 <li><strong>Label cardinality is bounded.</strong> Operations, methods, codes and reasons
-  come from fixed sets. Per-bucket usage (<code>objectio_bucket_*</code>) is one series
+  come from fixed sets. Per-bucket usage (<code>iolake_bucket_*</code>) is one series
   per bucket; leave it out with <code>--no-bucket-metrics</code> past tens of thousands
   of buckets. Per-volume and per-snapshot series are one per volume and
   snapshot.</li>
@@ -3526,73 +3668,73 @@ once per gateway. With several gateways, aggregate them with <code>max</code>, n
 </thead>
 <tbody>
 <tr>
-<td><code>objectio_auth_failures_total</code></td>
+<td><code>iolake_auth_failures_total</code></td>
 <td>counter</td>
 <td><code>reason</code></td>
 <td>Requests refused by authentication or authorization (unknown_key, expired, missing_credentials, malformed, denied, signature, clock_skew, internal, policy)</td>
 </tr>
 <tr>
-<td><code>objectio_iceberg_request_duration_seconds</code></td>
+<td><code>iolake_iceberg_request_duration_seconds</code></td>
 <td>histogram</td>
 <td><code>operation</code></td>
 <td>Iceberg REST catalog request latency</td>
 </tr>
 <tr>
-<td><code>objectio_iceberg_requests_total</code></td>
+<td><code>iolake_iceberg_requests_total</code></td>
 <td>counter</td>
 <td><code>operation, status</code></td>
 <td>Iceberg REST catalog requests</td>
 </tr>
 <tr>
-<td><code>objectio_s3_request_bytes_total</code></td>
+<td><code>iolake_s3_request_bytes_total</code></td>
 <td>counter</td>
 <td><code>operation</code></td>
 <td>Total request body bytes</td>
 </tr>
 <tr>
-<td><code>objectio_s3_request_duration_seconds</code></td>
+<td><code>iolake_s3_request_duration_seconds</code></td>
 <td>histogram</td>
 <td><code>operation</code></td>
 <td>S3 request duration histogram</td>
 </tr>
 <tr>
-<td><code>objectio_s3_request_errors_total</code></td>
+<td><code>iolake_s3_request_errors_total</code></td>
 <td>counter</td>
 <td><code>code, error, operation</code></td>
 <td>Failed S3 requests by HTTP code and S3 error name</td>
 </tr>
 <tr>
-<td><code>objectio_s3_request_size_bytes</code></td>
+<td><code>iolake_s3_request_size_bytes</code></td>
 <td>histogram</td>
 <td><code>operation</code></td>
 <td>Request body size (Content-Length) by operation</td>
 </tr>
 <tr>
-<td><code>objectio_s3_requests_in_flight</code></td>
+<td><code>iolake_s3_requests_in_flight</code></td>
 <td>gauge</td>
 <td><code>operation</code></td>
 <td>S3 requests currently being served</td>
 </tr>
 <tr>
-<td><code>objectio_s3_requests_total</code></td>
+<td><code>iolake_s3_requests_total</code></td>
 <td>counter</td>
 <td><code>operation, status</code></td>
 <td>Total S3 requests by operation and status</td>
 </tr>
 <tr>
-<td><code>objectio_s3_response_bytes_total</code></td>
+<td><code>iolake_s3_response_bytes_total</code></td>
 <td>counter</td>
 <td><code>operation</code></td>
 <td>Total response body bytes</td>
 </tr>
 <tr>
-<td><code>objectio_unity_request_duration_seconds</code></td>
+<td><code>iolake_unity_request_duration_seconds</code></td>
 <td>histogram</td>
 <td><code>operation</code></td>
 <td>Unity Catalog request latency</td>
 </tr>
 <tr>
-<td><code>objectio_unity_requests_total</code></td>
+<td><code>iolake_unity_requests_total</code></td>
 <td>counter</td>
 <td><code>operation, status</code></td>
 <td>Unity Catalog requests</td>
@@ -3612,199 +3754,199 @@ once per gateway. With several gateways, aggregate them with <code>max</code>, n
 </thead>
 <tbody>
 <tr>
-<td><code>objectio_dedup_dryrun_bytes_total</code></td>
+<td><code>iolake_dedup_dryrun_bytes_total</code></td>
 <td>counter</td>
 <td><code>bucket, chunking, result</code></td>
 <td>Bytes the dedup dry-run fingerprinted, and whether already stored</td>
 </tr>
 <tr>
-<td><code>objectio_dedup_dryrun_chunks_total</code></td>
+<td><code>iolake_dedup_dryrun_chunks_total</code></td>
 <td>counter</td>
 <td><code>bucket, chunking, result</code></td>
 <td>Chunks the dedup dry-run fingerprinted, and whether already stored</td>
 </tr>
 <tr>
-<td><code>objectio_dedup_dryrun_dropped_total</code></td>
+<td><code>iolake_dedup_dryrun_dropped_total</code></td>
 <td>counter</td>
 <td><code>reason</code></td>
 <td>Dry-run work given up on (queue full, lookup failed)</td>
 </tr>
 <tr>
-<td><code>objectio_dedup_dryrun_skipped_total</code></td>
+<td><code>iolake_dedup_dryrun_skipped_total</code></td>
 <td>counter</td>
 <td><code>reason</code></td>
 <td>Writes in dry-run buckets that dry-run does not look at (encrypted, inline)</td>
 </tr>
 <tr>
-<td><code>objectio_erasure_decode_seconds</code></td>
+<td><code>iolake_erasure_decode_seconds</code></td>
 <td>histogram</td>
 <td><code>path</code></td>
 <td>Time to decode one stripe; path=reconstruct means parity was needed</td>
 </tr>
 <tr>
-<td><code>objectio_erasure_encode_seconds</code></td>
+<td><code>iolake_erasure_encode_seconds</code></td>
 <td>histogram</td>
 <td>—</td>
 <td>Time to erasure-encode one stripe</td>
 </tr>
 <tr>
-<td><code>objectio_gateway_copied_bytes_total</code></td>
+<td><code>iolake_gateway_copied_bytes_total</code></td>
 <td>counter</td>
 <td><code>mode</code></td>
 <td>Bytes CopyObject copied, by mode; reference copies move none of them</td>
 </tr>
 <tr>
-<td><code>objectio_gateway_copies_total</code></td>
+<td><code>iolake_gateway_copies_total</code></td>
 <td>counter</td>
 <td><code>mode</code></td>
 <td>CopyObject requests completed, by mode: reference (shares the source's stripes) or bytes (rewritten)</td>
 </tr>
 <tr>
-<td><code>objectio_gateway_get_aborted_total</code></td>
+<td><code>iolake_gateway_get_aborted_total</code></td>
 <td>counter</td>
 <td><code>reason</code></td>
 <td>GETs cut off after their headers were sent: <code>read</code> (a stripe could not be read), <code>length</code> (a stripe read back other than its recorded size), <code>memory</code> (no room in the budget for the next stripe in time)</td>
 </tr>
 <tr>
-<td><code>objectio_gateway_inline_bytes_total</code></td>
+<td><code>iolake_gateway_inline_bytes_total</code></td>
 <td>counter</td>
 <td>—</td>
 <td>Bytes of objects stored in their metadata</td>
 </tr>
 <tr>
-<td><code>objectio_gateway_inline_objects_total</code></td>
+<td><code>iolake_gateway_inline_objects_total</code></td>
 <td>counter</td>
 <td>—</td>
 <td>Objects small enough to be stored in their metadata, with no shards</td>
 </tr>
 <tr>
-<td><code>objectio_gateway_memory_budget_bytes</code></td>
+<td><code>iolake_gateway_memory_budget_bytes</code></td>
 <td>gauge</td>
 <td>—</td>
 <td>The memory budget for request bodies and GET read-ahead (<code>--memory-budget</code>)</td>
 </tr>
 <tr>
-<td><code>objectio_gateway_memory_budget_in_use_bytes</code></td>
+<td><code>iolake_gateway_memory_budget_in_use_bytes</code></td>
 <td>gauge</td>
 <td>—</td>
 <td>Bytes of the memory budget held by requests now</td>
 </tr>
 <tr>
-<td><code>objectio_gateway_osd_request_errors_total</code></td>
+<td><code>iolake_gateway_osd_request_errors_total</code></td>
 <td>counter</td>
 <td><code>address, kind</code></td>
 <td>Failed shard calls to an OSD (timeout, refused, error)</td>
 </tr>
 <tr>
-<td><code>objectio_gateway_protection_data_shards</code></td>
+<td><code>iolake_gateway_protection_data_shards</code></td>
 <td>gauge</td>
 <td><code>scheme</code></td>
 <td>Number of data shards (k)</td>
 </tr>
 <tr>
-<td><code>objectio_gateway_protection_efficiency</code></td>
+<td><code>iolake_gateway_protection_efficiency</code></td>
 <td>gauge</td>
 <td><code>scheme</code></td>
 <td>Storage efficiency ratio (data/total)</td>
 </tr>
 <tr>
-<td><code>objectio_gateway_protection_lrc_global_parity</code></td>
+<td><code>iolake_gateway_protection_lrc_global_parity</code></td>
 <td>gauge</td>
 <td>—</td>
 <td>LRC global parity shards (LRC pools only)</td>
 </tr>
 <tr>
-<td><code>objectio_gateway_protection_lrc_local_parity</code></td>
+<td><code>iolake_gateway_protection_lrc_local_parity</code></td>
 <td>gauge</td>
 <td>—</td>
 <td>LRC local parity shards (LRC pools only)</td>
 </tr>
 <tr>
-<td><code>objectio_gateway_protection_parity_shards</code></td>
+<td><code>iolake_gateway_protection_parity_shards</code></td>
 <td>gauge</td>
 <td><code>scheme</code></td>
 <td>Number of parity shards (m)</td>
 </tr>
 <tr>
-<td><code>objectio_gateway_protection_total_shards</code></td>
+<td><code>iolake_gateway_protection_total_shards</code></td>
 <td>gauge</td>
 <td><code>scheme</code></td>
 <td>Total shards (data + parity)</td>
 </tr>
 <tr>
-<td><code>objectio_gateway_rdma_fallbacks_total</code></td>
+<td><code>iolake_gateway_rdma_fallbacks_total</code></td>
 <td>counter</td>
 <td><code>direction, reason</code></td>
 <td>Shards sent over gRPC to an OSD that offers Transfer Engine</td>
 </tr>
 <tr>
-<td><code>objectio_gateway_request_phase_seconds</code></td>
+<td><code>iolake_gateway_request_phase_seconds</code></td>
 <td>histogram</td>
 <td><code>operation, phase</code></td>
 <td>Time spent in each phase of a request, by operation and phase</td>
 </tr>
 <tr>
-<td><code>objectio_gateway_requests_admitted</code></td>
+<td><code>iolake_gateway_requests_admitted</code></td>
 <td>gauge</td>
 <td>—</td>
 <td>Requests admitted and not yet finished, response bodies included</td>
 </tr>
 <tr>
-<td><code>objectio_gateway_requests_limit</code></td>
+<td><code>iolake_gateway_requests_limit</code></td>
 <td>gauge</td>
 <td>—</td>
 <td>Requests the gateway serves at once (<code>--max-requests</code>)</td>
 </tr>
 <tr>
-<td><code>objectio_gateway_requests_rejected_total</code></td>
+<td><code>iolake_gateway_requests_rejected_total</code></td>
 <td>counter</td>
 <td><code>reason</code></td>
 <td>Requests refused with <code>503 SlowDown</code>, by the limit they hit (<code>requests</code> or <code>memory</code>)</td>
 </tr>
 <tr>
-<td><code>objectio_gateway_shard_checksum_mismatches_total</code></td>
+<td><code>iolake_gateway_shard_checksum_mismatches_total</code></td>
 <td>counter</td>
 <td><code>direction</code></td>
 <td>Shards sent over gRPC that did not match their checksum</td>
 </tr>
 <tr>
-<td><code>objectio_gateway_shard_latency_seconds</code></td>
+<td><code>iolake_gateway_shard_latency_seconds</code></td>
 <td>histogram</td>
 <td><code>address, direction</code></td>
 <td>Time for one shard read or write to an OSD, by OSD</td>
 </tr>
 <tr>
-<td><code>objectio_gateway_shard_reclaim_failures_total</code></td>
+<td><code>iolake_gateway_shard_reclaim_failures_total</code></td>
 <td>counter</td>
 <td><code>reason</code></td>
 <td>Shard deletes that failed, leaving the block allocated</td>
 </tr>
 <tr>
-<td><code>objectio_gateway_shard_transfers_total</code></td>
+<td><code>iolake_gateway_shard_transfers_total</code></td>
 <td>counter</td>
 <td><code>direction, transport</code></td>
 <td>Shards moved to or from OSDs, by direction and transport (rdma or grpc)</td>
 </tr>
 <tr>
-<td><code>objectio_gateway_shards_reclaimed_total</code></td>
+<td><code>iolake_gateway_shards_reclaimed_total</code></td>
 <td>counter</td>
 <td><code>reason</code></td>
 <td>Shards deleted because nothing references them any more</td>
 </tr>
 <tr>
-<td><code>objectio_gateway_timeouts_total</code></td>
+<td><code>iolake_gateway_timeouts_total</code></td>
 <td>counter</td>
 <td><code>kind</code></td>
 <td>Requests or connections cut off by a timeout: <code>body</code> (a request body stopped arriving), <code>send</code> (a client stopped reading)</td>
 </tr>
 <tr>
-<td><code>objectio_gateway_uptime_seconds</code></td>
+<td><code>iolake_gateway_uptime_seconds</code></td>
 <td>counter</td>
 <td>—</td>
 <td>Gateway uptime in seconds</td>
 </tr>
 <tr>
-<td><code>objectio_read_locality_bytes_total</code></td>
+<td><code>iolake_read_locality_bytes_total</code></td>
 <td>counter</td>
 <td><code>locality</code></td>
 <td>Bytes fetched from OSDs, by topology distance</td>
@@ -3824,211 +3966,211 @@ once per gateway. With several gateways, aggregate them with <code>max</code>, n
 </thead>
 <tbody>
 <tr>
-<td><code>objectio_bucket_last_modified_timestamp_seconds</code></td>
+<td><code>iolake_bucket_last_modified_timestamp_seconds</code></td>
 <td>gauge</td>
 <td><code>bucket, tenant</code></td>
 <td>Newest write or delete in the bucket</td>
 </tr>
 <tr>
-<td><code>objectio_bucket_logical_bytes</code></td>
+<td><code>iolake_bucket_logical_bytes</code></td>
 <td>gauge</td>
 <td><code>bucket, tenant</code></td>
 <td>Bytes of current objects as uploaded</td>
 </tr>
 <tr>
-<td><code>objectio_bucket_noncurrent_bytes</code></td>
+<td><code>iolake_bucket_noncurrent_bytes</code></td>
 <td>gauge</td>
 <td><code>bucket, tenant</code></td>
 <td>Bytes of noncurrent versions as uploaded</td>
 </tr>
 <tr>
-<td><code>objectio_bucket_noncurrent_versions</code></td>
+<td><code>iolake_bucket_noncurrent_versions</code></td>
 <td>gauge</td>
 <td><code>bucket, tenant</code></td>
 <td>Noncurrent object versions</td>
 </tr>
 <tr>
-<td><code>objectio_bucket_objects</code></td>
+<td><code>iolake_bucket_objects</code></td>
 <td>gauge</td>
 <td><code>bucket, tenant</code></td>
 <td>Current objects</td>
 </tr>
 <tr>
-<td><code>objectio_bucket_quota_bytes</code></td>
+<td><code>iolake_bucket_quota_bytes</code></td>
 <td>gauge</td>
 <td><code>bucket, tenant</code></td>
 <td>Storage quota (0 = unlimited)</td>
 </tr>
 <tr>
-<td><code>objectio_s3_quota_refusals_total</code></td>
+<td><code>iolake_s3_quota_refusals_total</code></td>
 <td>counter</td>
 <td><code>scope</code> (<code>bucket</code>, <code>tenant</code>)</td>
 <td>Writes refused for passing a quota (403 <code>QuotaExceeded</code>)</td>
 </tr>
 <tr>
-<td><code>objectio_bucket_stored_bytes</code></td>
+<td><code>iolake_bucket_stored_bytes</code></td>
 <td>gauge</td>
 <td><code>bucket, tenant</code></td>
 <td>Bytes on disk for all versions incl. parity</td>
 </tr>
 <tr>
-<td><code>objectio_capacity_poll_duration_seconds</code></td>
+<td><code>iolake_capacity_poll_duration_seconds</code></td>
 <td>gauge</td>
 <td>—</td>
 <td>How long the last poll took</td>
 </tr>
 <tr>
-<td><code>objectio_capacity_poll_failures_total</code></td>
+<td><code>iolake_capacity_poll_failures_total</code></td>
 <td>counter</td>
 <td>—</td>
 <td>Polls in which meta did not answer</td>
 </tr>
 <tr>
-<td><code>objectio_capacity_poll_last_success_timestamp_seconds</code></td>
+<td><code>iolake_capacity_poll_last_success_timestamp_seconds</code></td>
 <td>gauge</td>
 <td>—</td>
 <td>When the gateway last refreshed capacity, usage and cluster metrics</td>
 </tr>
 <tr>
-<td><code>objectio_capacity_polls_total</code></td>
+<td><code>iolake_capacity_polls_total</code></td>
 <td>counter</td>
 <td>—</td>
 <td>Polls attempted</td>
 </tr>
 <tr>
-<td><code>objectio_cluster_available_bytes</code></td>
+<td><code>iolake_cluster_available_bytes</code></td>
 <td>gauge</td>
 <td>—</td>
 <td>Raw bytes free across OSDs that answered the last poll</td>
 </tr>
 <tr>
-<td><code>objectio_cluster_buckets</code></td>
+<td><code>iolake_cluster_buckets</code></td>
 <td>gauge</td>
 <td>—</td>
 <td>Buckets</td>
 </tr>
 <tr>
-<td><code>objectio_cluster_capacity_bytes</code></td>
+<td><code>iolake_cluster_capacity_bytes</code></td>
 <td>gauge</td>
 <td>—</td>
 <td>Raw capacity across OSDs that answered the last poll</td>
 </tr>
 <tr>
-<td><code>objectio_cluster_logical_bytes</code></td>
+<td><code>iolake_cluster_logical_bytes</code></td>
 <td>gauge</td>
 <td>—</td>
 <td>Bytes of current objects as uploaded, all buckets</td>
 </tr>
 <tr>
-<td><code>objectio_cluster_objects</code></td>
+<td><code>iolake_cluster_objects</code></td>
 <td>gauge</td>
 <td>—</td>
 <td>Current objects across all buckets</td>
 </tr>
 <tr>
-<td><code>objectio_cluster_osds_total</code></td>
+<td><code>iolake_cluster_osds_total</code></td>
 <td>gauge</td>
 <td>—</td>
 <td>OSDs registered with the cluster</td>
 </tr>
 <tr>
-<td><code>objectio_cluster_osds_up</code></td>
+<td><code>iolake_cluster_osds_up</code></td>
 <td>gauge</td>
 <td>—</td>
 <td>OSDs that answered the last poll</td>
 </tr>
 <tr>
-<td><code>objectio_cluster_stored_bytes</code></td>
+<td><code>iolake_cluster_stored_bytes</code></td>
 <td>gauge</td>
 <td>—</td>
 <td>Bytes on disk for all object versions incl. parity</td>
 </tr>
 <tr>
-<td><code>objectio_cluster_usable_capacity_bytes</code></td>
+<td><code>iolake_cluster_usable_capacity_bytes</code></td>
 <td>gauge</td>
 <td>—</td>
 <td>Raw capacity scaled by the default protection efficiency</td>
 </tr>
 <tr>
-<td><code>objectio_cluster_used_bytes</code></td>
+<td><code>iolake_cluster_used_bytes</code></td>
 <td>gauge</td>
 <td>—</td>
 <td>Raw bytes allocated across OSDs that answered the last poll</td>
 </tr>
 <tr>
-<td><code>objectio_osd_capacity_bytes</code></td>
+<td><code>iolake_osd_capacity_bytes</code></td>
 <td>gauge</td>
 <td><code>address, osd_id</code></td>
 <td>Raw capacity of one OSD</td>
 </tr>
 <tr>
-<td><code>objectio_osd_shards</code></td>
+<td><code>iolake_osd_shards</code></td>
 <td>gauge</td>
 <td><code>address, osd_id</code></td>
 <td>Shards stored on one OSD</td>
 </tr>
 <tr>
-<td><code>objectio_osd_up</code></td>
+<td><code>iolake_osd_up</code></td>
 <td>gauge</td>
 <td><code>address, osd_id</code></td>
 <td>1 if the OSD answered the last poll</td>
 </tr>
 <tr>
-<td><code>objectio_osd_uptime_seconds</code></td>
+<td><code>iolake_osd_uptime_seconds</code></td>
 <td>counter</td>
 <td><code>osd_id</code></td>
 <td>OSD uptime in seconds</td>
 </tr>
 <tr>
-<td><code>objectio_osd_used_bytes</code></td>
+<td><code>iolake_osd_used_bytes</code></td>
 <td>gauge</td>
 <td><code>address, osd_id</code></td>
 <td>Raw bytes allocated on one OSD</td>
 </tr>
 <tr>
-<td><code>objectio_tenant_buckets</code></td>
+<td><code>iolake_tenant_buckets</code></td>
 <td>gauge</td>
 <td><code>tenant</code></td>
 <td>Buckets owned by the tenant</td>
 </tr>
 <tr>
-<td><code>objectio_tenant_last_modified_timestamp_seconds</code></td>
+<td><code>iolake_tenant_last_modified_timestamp_seconds</code></td>
 <td>gauge</td>
 <td><code>tenant</code></td>
 <td>Newest write or delete in any of the tenant's buckets</td>
 </tr>
 <tr>
-<td><code>objectio_tenant_logical_bytes</code></td>
+<td><code>iolake_tenant_logical_bytes</code></td>
 <td>gauge</td>
 <td><code>tenant</code></td>
 <td>Bytes of current objects as uploaded</td>
 </tr>
 <tr>
-<td><code>objectio_tenant_objects</code></td>
+<td><code>iolake_tenant_objects</code></td>
 <td>gauge</td>
 <td><code>tenant</code></td>
 <td>Current objects</td>
 </tr>
 <tr>
-<td><code>objectio_tenant_quota_bytes</code></td>
+<td><code>iolake_tenant_quota_bytes</code></td>
 <td>gauge</td>
 <td><code>tenant</code></td>
 <td>Storage quota (0 = unlimited)</td>
 </tr>
 <tr>
-<td><code>objectio_tenant_stored_bytes</code></td>
+<td><code>iolake_tenant_stored_bytes</code></td>
 <td>gauge</td>
 <td><code>tenant</code></td>
 <td>Bytes on disk for all versions incl. parity</td>
 </tr>
 <tr>
-<td><code>objectio_usage_last_update_timestamp_seconds</code></td>
+<td><code>iolake_usage_last_update_timestamp_seconds</code></td>
 <td>gauge</td>
 <td>—</td>
 <td>When usage was last refreshed</td>
 </tr>
 <tr>
-<td><code>objectio_usage_osds_stale</code></td>
+<td><code>iolake_usage_osds_stale</code></td>
 <td>gauge</td>
 <td>—</td>
 <td>OSDs whose usage is carried over from an earlier poll</td>
@@ -4048,97 +4190,97 @@ once per gateway. With several gateways, aggregate them with <code>max</code>, n
 </thead>
 <tbody>
 <tr>
-<td><code>objectio_at_risk_bytes</code></td>
+<td><code>iolake_at_risk_bytes</code></td>
 <td>gauge</td>
 <td>—</td>
 <td>Logical bytes of at-risk objects</td>
 </tr>
 <tr>
-<td><code>objectio_degraded_bytes</code></td>
+<td><code>iolake_degraded_bytes</code></td>
 <td>gauge</td>
 <td>—</td>
 <td>Logical bytes of degraded objects</td>
 </tr>
 <tr>
-<td><code>objectio_drain_errored</code></td>
+<td><code>iolake_drain_errored</code></td>
 <td>gauge</td>
 <td><code>node_id</code></td>
 <td>1 when a drain has hit errors</td>
 </tr>
 <tr>
-<td><code>objectio_drain_shards_initial</code></td>
+<td><code>iolake_drain_shards_initial</code></td>
 <td>gauge</td>
 <td><code>node_id</code></td>
 <td>Shards a draining OSD held when the drain began</td>
 </tr>
 <tr>
-<td><code>objectio_drain_shards_migrated_total</code></td>
+<td><code>iolake_drain_shards_migrated_total</code></td>
 <td>counter</td>
 <td><code>node_id</code></td>
 <td>Shards moved off a draining OSD</td>
 </tr>
 <tr>
-<td><code>objectio_drain_shards_remaining</code></td>
+<td><code>iolake_drain_shards_remaining</code></td>
 <td>gauge</td>
 <td><code>node_id</code></td>
 <td>Shards still to move off a draining OSD</td>
 </tr>
 <tr>
-<td><code>objectio_objects_at_risk</code></td>
+<td><code>iolake_objects_at_risk</code></td>
 <td>gauge</td>
 <td>—</td>
 <td>Objects with fewer than k+1 reachable shards: one more loss makes them unreadable</td>
 </tr>
 <tr>
-<td><code>objectio_objects_checked</code></td>
+<td><code>iolake_objects_checked</code></td>
 <td>gauge</td>
 <td>—</td>
 <td>Objects and versions whose shard availability was checked</td>
 </tr>
 <tr>
-<td><code>objectio_objects_degraded</code></td>
+<td><code>iolake_objects_degraded</code></td>
 <td>gauge</td>
 <td>—</td>
 <td>Objects with a shard on an OSD that is down (still readable)</td>
 </tr>
 <tr>
-<td><code>objectio_objects_unreadable</code></td>
+<td><code>iolake_objects_unreadable</code></td>
 <td>gauge</td>
 <td>—</td>
 <td>Objects with fewer than k reachable shards</td>
 </tr>
 <tr>
-<td><code>objectio_rebalance_last_sweep_timestamp_seconds</code></td>
+<td><code>iolake_rebalance_last_sweep_timestamp_seconds</code></td>
 <td>gauge</td>
 <td>—</td>
 <td>When the balancer last ran</td>
 </tr>
 <tr>
-<td><code>objectio_rebalance_pg_candidates</code></td>
+<td><code>iolake_rebalance_pg_candidates</code></td>
 <td>gauge</td>
 <td>—</td>
 <td>Placement groups the balancer wanted to move on its last tick</td>
 </tr>
 <tr>
-<td><code>objectio_rebalance_pgs_moved_total</code></td>
+<td><code>iolake_rebalance_pgs_moved_total</code></td>
 <td>counter</td>
 <td>—</td>
 <td>Placement groups the balancer has moved</td>
 </tr>
 <tr>
-<td><code>objectio_rebalance_running</code></td>
+<td><code>iolake_rebalance_running</code></td>
 <td>gauge</td>
 <td>—</td>
 <td>1 if the balancer is started and not paused</td>
 </tr>
 <tr>
-<td><code>objectio_safety_osds_unreported</code></td>
+<td><code>iolake_safety_osds_unreported</code></td>
 <td>gauge</td>
 <td>—</td>
 <td>OSDs that did not answer, so objects only they hold metadata for were not checked</td>
 </tr>
 <tr>
-<td><code>objectio_unreadable_bytes</code></td>
+<td><code>iolake_unreadable_bytes</code></td>
 <td>gauge</td>
 <td>—</td>
 <td>Logical bytes of unreadable objects</td>
@@ -4158,43 +4300,43 @@ once per gateway. With several gateways, aggregate them with <code>max</code>, n
 </thead>
 <tbody>
 <tr>
-<td><code>objectio_lifecycle_actions_total</code></td>
+<td><code>iolake_lifecycle_actions_total</code></td>
 <td>counter</td>
 <td><code>action, result</code></td>
 <td>Lifecycle actions (expire, delete_marker, abort_upload) and whether they succeeded</td>
 </tr>
 <tr>
-<td><code>objectio_lifecycle_scan_seconds</code></td>
+<td><code>iolake_lifecycle_scan_seconds</code></td>
 <td>histogram</td>
 <td>—</td>
 <td>Time one lifecycle scan took</td>
 </tr>
 <tr>
-<td><code>objectio_lifecycle_scans_total</code></td>
+<td><code>iolake_lifecycle_scans_total</code></td>
 <td>counter</td>
 <td><code>result</code></td>
 <td>Lifecycle scans over every bucket</td>
 </tr>
 <tr>
-<td><code>objectio_multipart_upload_oldest_age_seconds</code></td>
+<td><code>iolake_multipart_upload_oldest_age_seconds</code></td>
 <td>gauge</td>
 <td>—</td>
 <td>Age of the oldest open multipart upload</td>
 </tr>
 <tr>
-<td><code>objectio_multipart_upload_parts_bytes</code></td>
+<td><code>iolake_multipart_upload_parts_bytes</code></td>
 <td>gauge</td>
 <td>—</td>
 <td>Bytes held by parts of open multipart uploads</td>
 </tr>
 <tr>
-<td><code>objectio_multipart_uploads_older_than</code></td>
+<td><code>iolake_multipart_uploads_older_than</code></td>
 <td>gauge</td>
 <td><code>age</code></td>
 <td>Open multipart uploads older than the given age</td>
 </tr>
 <tr>
-<td><code>objectio_multipart_uploads_open</code></td>
+<td><code>iolake_multipart_uploads_open</code></td>
 <td>gauge</td>
 <td>—</td>
 <td>Multipart uploads started and neither completed nor aborted</td>
@@ -4214,79 +4356,79 @@ once per gateway. With several gateways, aggregate them with <code>max</code>, n
 </thead>
 <tbody>
 <tr>
-<td><code>objectio_block_cache_clean_bytes</code></td>
+<td><code>iolake_block_cache_clean_bytes</code></td>
 <td>gauge</td>
 <td>—</td>
 <td>Bytes of stored chunks held in the cache for reads</td>
 </tr>
 <tr>
-<td><code>objectio_block_cache_dirty_bytes</code></td>
+<td><code>iolake_block_cache_dirty_bytes</code></td>
 <td>gauge</td>
 <td>—</td>
 <td>Bytes written and journaled but not yet stored as stripes</td>
 </tr>
 <tr>
-<td><code>objectio_block_cache_dirty_chunks</code></td>
+<td><code>iolake_block_cache_dirty_chunks</code></td>
 <td>gauge</td>
 <td>—</td>
 <td>Chunks written and journaled but not yet stored as stripes</td>
 </tr>
 <tr>
-<td><code>objectio_block_cache_volumes</code></td>
+<td><code>iolake_block_cache_volumes</code></td>
 <td>gauge</td>
 <td>—</td>
 <td>Volumes with a cache on this gateway</td>
 </tr>
 <tr>
-<td><code>objectio_block_chunk_flush_seconds</code></td>
+<td><code>iolake_block_chunk_flush_seconds</code></td>
 <td>histogram</td>
 <td><code>result</code></td>
 <td>Time to store one chunk: encode, write its shards, record it in meta</td>
 </tr>
 <tr>
-<td><code>objectio_block_chunk_reads_total</code></td>
+<td><code>iolake_block_chunk_reads_total</code></td>
 <td>counter</td>
 <td><code>source</code></td>
 <td>Chunks a read had to fetch, not in the cache: stored (from their stripe) or unwritten (zeros)</td>
 </tr>
 <tr>
-<td><code>objectio_block_chunks_flushed_total</code></td>
+<td><code>iolake_block_chunks_flushed_total</code></td>
 <td>counter</td>
 <td><code>result</code></td>
 <td>Chunk flushes, by result: stored, conflict (changed meanwhile, retried) or failed (retried)</td>
 </tr>
 <tr>
-<td><code>objectio_block_io_bytes_total</code></td>
+<td><code>iolake_block_io_bytes_total</code></td>
 <td>counter</td>
 <td><code>protocol, op</code></td>
 <td>Bytes read or written by block requests that succeeded</td>
 </tr>
 <tr>
-<td><code>objectio_block_io_errors_total</code></td>
+<td><code>iolake_block_io_errors_total</code></td>
 <td>counter</td>
 <td><code>protocol, op</code></td>
 <td>Block requests that failed</td>
 </tr>
 <tr>
-<td><code>objectio_block_io_seconds</code></td>
+<td><code>iolake_block_io_seconds</code></td>
 <td>histogram</td>
 <td><code>protocol, op</code></td>
 <td>Time to serve one block request, by protocol and operation</td>
 </tr>
 <tr>
-<td><code>objectio_block_journal_fsync_seconds</code></td>
+<td><code>iolake_block_journal_fsync_seconds</code></td>
 <td>histogram</td>
 <td>—</td>
 <td>Time to fsync the block write journal; every acknowledged write waits for one</td>
 </tr>
 <tr>
-<td><code>objectio_block_shard_delete_failures_total</code></td>
+<td><code>iolake_block_shard_delete_failures_total</code></td>
 <td>counter</td>
 <td><code>reason</code></td>
 <td>Shard deletes that failed while freeing stripes, leaving space allocated</td>
 </tr>
 <tr>
-<td><code>objectio_block_stripes_freed_total</code></td>
+<td><code>iolake_block_stripes_freed_total</code></td>
 <td>counter</td>
 <td><code>reason</code></td>
 <td>Stripes deleted because nothing uses them any more (overwrite, volume, snapshot)</td>
@@ -4306,49 +4448,49 @@ once per gateway. With several gateways, aggregate them with <code>max</code>, n
 </thead>
 <tbody>
 <tr>
-<td><code>objectio_block_snapshot_chunks</code></td>
+<td><code>iolake_block_snapshot_chunks</code></td>
 <td>gauge</td>
 <td><code>snapshot_id, volume_id, name</code></td>
 <td>Chunks one snapshot holds (shared with its volume until overwritten)</td>
 </tr>
 <tr>
-<td><code>objectio_block_snapshots_total</code></td>
+<td><code>iolake_block_snapshots_total</code></td>
 <td>gauge</td>
 <td>—</td>
 <td>Block snapshots</td>
 </tr>
 <tr>
-<td><code>objectio_block_volume_size_bytes</code></td>
+<td><code>iolake_block_volume_size_bytes</code></td>
 <td>gauge</td>
 <td><code>volume_id, name, pool</code></td>
 <td>Size of one block volume</td>
 </tr>
 <tr>
-<td><code>objectio_block_volume_used_bytes</code></td>
+<td><code>iolake_block_volume_used_bytes</code></td>
 <td>gauge</td>
 <td><code>volume_id, name, pool</code></td>
 <td>Chunks one block volume has written, in bytes</td>
 </tr>
 <tr>
-<td><code>objectio_block_volumes_by_state</code></td>
+<td><code>iolake_block_volumes_by_state</code></td>
 <td>gauge</td>
 <td><code>state</code></td>
 <td>Block volumes by state</td>
 </tr>
 <tr>
-<td><code>objectio_block_volumes_provisioned_bytes</code></td>
+<td><code>iolake_block_volumes_provisioned_bytes</code></td>
 <td>gauge</td>
 <td>—</td>
 <td>Size of every block volume added up</td>
 </tr>
 <tr>
-<td><code>objectio_block_volumes_total</code></td>
+<td><code>iolake_block_volumes_total</code></td>
 <td>gauge</td>
 <td>—</td>
 <td>Block volumes</td>
 </tr>
 <tr>
-<td><code>objectio_block_volumes_used_bytes</code></td>
+<td><code>iolake_block_volumes_used_bytes</code></td>
 <td>gauge</td>
 <td>—</td>
 <td>Chunks block volumes have written, in bytes (volumes are thin: unwritten chunks take nothing)</td>
@@ -4368,55 +4510,55 @@ once per gateway. With several gateways, aggregate them with <code>max</code>, n
 </thead>
 <tbody>
 <tr>
-<td><code>objectio_meta_buckets_total</code></td>
+<td><code>iolake_meta_buckets_total</code></td>
 <td>gauge</td>
 <td>—</td>
 <td>Total number of buckets</td>
 </tr>
 <tr>
-<td><code>objectio_meta_commit_seconds</code></td>
+<td><code>iolake_meta_commit_seconds</code></td>
 <td>histogram</td>
 <td>—</td>
 <td>Time to commit one redb write transaction (includes fsync)</td>
 </tr>
 <tr>
-<td><code>objectio_meta_grpc_latency_seconds</code></td>
+<td><code>iolake_meta_grpc_latency_seconds</code></td>
 <td>histogram</td>
 <td><code>method</code></td>
 <td>Time meta took to answer a gRPC call, by method</td>
 </tr>
 <tr>
-<td><code>objectio_meta_grpc_requests_total</code></td>
+<td><code>iolake_meta_grpc_requests_total</code></td>
 <td>counter</td>
 <td><code>code, component, method</code></td>
 <td>gRPC calls meta served, by method and status code</td>
 </tr>
 <tr>
-<td><code>objectio_meta_osds_total</code></td>
+<td><code>iolake_meta_osds_total</code></td>
 <td>gauge</td>
 <td>—</td>
 <td>Total registered OSDs</td>
 </tr>
 <tr>
-<td><code>objectio_meta_shared_stripe_referrers</code></td>
+<td><code>iolake_meta_shared_stripe_referrers</code></td>
 <td>gauge</td>
 <td>—</td>
 <td>References held on shared stripes; a stripe is freed when its last one goes</td>
 </tr>
 <tr>
-<td><code>objectio_meta_shared_stripes</code></td>
+<td><code>iolake_meta_shared_stripes</code></td>
 <td>gauge</td>
 <td>—</td>
 <td>Stripes used by more than one object, chunk, snapshot or clone (zero-copy copies, snapshots)</td>
 </tr>
 <tr>
-<td><code>objectio_meta_uptime_seconds</code></td>
+<td><code>iolake_meta_uptime_seconds</code></td>
 <td>counter</td>
 <td>—</td>
 <td>Metadata service uptime</td>
 </tr>
 <tr>
-<td><code>objectio_meta_users_total</code></td>
+<td><code>iolake_meta_users_total</code></td>
 <td>gauge</td>
 <td>—</td>
 <td>Total users</td>
@@ -4436,73 +4578,73 @@ once per gateway. With several gateways, aggregate them with <code>max</code>, n
 </thead>
 <tbody>
 <tr>
-<td><code>objectio_meta_raft_applied_index</code></td>
+<td><code>iolake_meta_raft_applied_index</code></td>
 <td>gauge</td>
 <td>—</td>
 <td>Index of the last entry applied to this node's state</td>
 </tr>
 <tr>
-<td><code>objectio_meta_raft_has_leader</code></td>
+<td><code>iolake_meta_raft_has_leader</code></td>
 <td>gauge</td>
 <td>—</td>
 <td>1 while this node knows a leader; 0 means no writes can commit</td>
 </tr>
 <tr>
-<td><code>objectio_meta_raft_is_leader</code></td>
+<td><code>iolake_meta_raft_is_leader</code></td>
 <td>gauge</td>
 <td>—</td>
 <td>1 on the Raft leader, 0 elsewhere</td>
 </tr>
 <tr>
-<td><code>objectio_meta_raft_last_log_index</code></td>
+<td><code>iolake_meta_raft_last_log_index</code></td>
 <td>gauge</td>
 <td>—</td>
 <td>Index of the last entry in this node's Raft log</td>
 </tr>
 <tr>
-<td><code>objectio_meta_raft_purged_index</code></td>
+<td><code>iolake_meta_raft_purged_index</code></td>
 <td>gauge</td>
 <td>—</td>
 <td>Index up to which the log has been compacted away</td>
 </tr>
 <tr>
-<td><code>objectio_meta_raft_replication_lag_entries</code></td>
+<td><code>iolake_meta_raft_replication_lag_entries</code></td>
 <td>gauge</td>
 <td><code>peer</code></td>
 <td>Entries a follower is behind the leader (leader only; multi-node meta)</td>
 </tr>
 <tr>
-<td><code>objectio_meta_raft_snapshot_build_seconds</code></td>
+<td><code>iolake_meta_raft_snapshot_build_seconds</code></td>
 <td>histogram</td>
 <td>—</td>
 <td>Time to build a Raft snapshot of the whole state machine (built in memory)</td>
 </tr>
 <tr>
-<td><code>objectio_meta_raft_snapshot_bytes</code></td>
+<td><code>iolake_meta_raft_snapshot_bytes</code></td>
 <td>gauge</td>
 <td>—</td>
 <td>Size of the last Raft snapshot built (held in memory while sent)</td>
 </tr>
 <tr>
-<td><code>objectio_meta_raft_snapshot_index</code></td>
+<td><code>iolake_meta_raft_snapshot_index</code></td>
 <td>gauge</td>
 <td>—</td>
 <td>Index the last snapshot covers</td>
 </tr>
 <tr>
-<td><code>objectio_meta_raft_snapshot_install_seconds</code></td>
+<td><code>iolake_meta_raft_snapshot_install_seconds</code></td>
 <td>histogram</td>
 <td>—</td>
 <td>Time to install a Raft snapshot received from the leader</td>
 </tr>
 <tr>
-<td><code>objectio_meta_raft_term</code></td>
+<td><code>iolake_meta_raft_term</code></td>
 <td>gauge</td>
 <td>—</td>
 <td>Current Raft term; a rising term means elections</td>
 </tr>
 <tr>
-<td><code>objectio_meta_raft_voters</code></td>
+<td><code>iolake_meta_raft_voters</code></td>
 <td>gauge</td>
 <td>—</td>
 <td>Voting members of the Raft cluster</td>
@@ -4523,31 +4665,31 @@ filling</a>.</p>
 </thead>
 <tbody>
 <tr>
-<td><code>objectio_meta_disk_free_bytes</code></td>
+<td><code>iolake_meta_disk_free_bytes</code></td>
 <td>gauge</td>
 <td>—</td>
 <td>Bytes free on the filesystem of meta's data directory; -1 when it can't be told</td>
 </tr>
 <tr>
-<td><code>objectio_meta_disk_reserve_bytes</code></td>
+<td><code>iolake_meta_disk_reserve_bytes</code></td>
 <td>gauge</td>
 <td>—</td>
 <td>The reserve meta keeps free (<code>--min-free-mib</code>): under it the leader refuses writes</td>
 </tr>
 <tr>
-<td><code>objectio_meta_disk_full</code></td>
+<td><code>iolake_meta_disk_full</code></td>
 <td>gauge</td>
 <td>—</td>
 <td>1 while the node is under its reserve, or a write of its own found the filesystem full in the last 10 s</td>
 </tr>
 <tr>
-<td><code>objectio_meta_writes_refused_no_room_total</code></td>
+<td><code>iolake_meta_writes_refused_no_room_total</code></td>
 <td>counter</td>
 <td>—</td>
 <td>Writes this node refused, as leader, for want of room (507 to S3 clients)</td>
 </tr>
 <tr>
-<td><code>objectio_meta_disk_out_of_space_total</code></td>
+<td><code>iolake_meta_disk_out_of_space_total</code></td>
 <td>counter</td>
 <td>—</td>
 <td>Writes to the Raft log or a snapshot that found the filesystem full (ENOSPC, EDQUOT) and waited</td>
@@ -4567,49 +4709,49 @@ filling</a>.</p>
 </thead>
 <tbody>
 <tr>
-<td><code>objectio_meta_repair_block_stripes_checked_total</code></td>
+<td><code>iolake_meta_repair_block_stripes_checked_total</code></td>
 <td>counter</td>
 <td>—</td>
 <td>Block chunk stripes checked by the repairer (also counted in objects checked)</td>
 </tr>
 <tr>
-<td><code>objectio_meta_repair_errors_total</code></td>
+<td><code>iolake_meta_repair_errors_total</code></td>
 <td>counter</td>
 <td>—</td>
 <td>Repairs that failed and will be retried next pass</td>
 </tr>
 <tr>
-<td><code>objectio_meta_repair_last_pass_seconds</code></td>
+<td><code>iolake_meta_repair_last_pass_seconds</code></td>
 <td>gauge</td>
 <td>—</td>
 <td>How long the last completed repair pass took (on the node that ran it)</td>
 </tr>
 <tr>
-<td><code>objectio_meta_repair_last_pass_timestamp_seconds</code></td>
+<td><code>iolake_meta_repair_last_pass_timestamp_seconds</code></td>
 <td>gauge</td>
 <td>—</td>
 <td>When the last repair pass completed (Unix time; 0: none yet on this node)</td>
 </tr>
 <tr>
-<td><code>objectio_meta_repair_objects_checked_total</code></td>
+<td><code>iolake_meta_repair_objects_checked_total</code></td>
 <td>counter</td>
 <td>—</td>
 <td>Objects checked by the repairer</td>
 </tr>
 <tr>
-<td><code>objectio_meta_repair_passes_total</code></td>
+<td><code>iolake_meta_repair_passes_total</code></td>
 <td>counter</td>
 <td>—</td>
 <td>Completed repair passes</td>
 </tr>
 <tr>
-<td><code>objectio_meta_repair_shards_rebuilt_total</code></td>
+<td><code>iolake_meta_repair_shards_rebuilt_total</code></td>
 <td>counter</td>
 <td><code>reason</code></td>
 <td>Shards rebuilt from the rest of their stripe</td>
 </tr>
 <tr>
-<td><code>objectio_meta_repair_unrecoverable_stripes_total</code></td>
+<td><code>iolake_meta_repair_unrecoverable_stripes_total</code></td>
 <td>counter</td>
 <td>—</td>
 <td>Stripes found with fewer than k good shards</td>
@@ -4620,8 +4762,8 @@ filling</a>.</p>
 <p>Exported by: meta; the leader counts them, so take the <code>max</code> over meta
 nodes. The states are peering's (<code>Down</code>, <code>Incomplete</code>,
 <code>Undersized</code>, <code>Degraded</code>, <code>Clean</code>) and recovery's while it works a PG
-(<code>Recovering</code>, <code>Backfilling</code>, <code>WaitTooFull</code>); <code>obioctl pg list</code> and
-<code>obioctl pg get</code> show the same per PG.</p>
+(<code>Recovering</code>, <code>Backfilling</code>, <code>WaitTooFull</code>); <code>iolakectl pg list</code> and
+<code>iolakectl pg get</code> show the same per PG.</p>
 <table>
 <thead>
 <tr>
@@ -4633,217 +4775,217 @@ nodes. The states are peering's (<code>Down</code>, <code>Incomplete</code>,
 </thead>
 <tbody>
 <tr>
-<td><code>objectio_meta_pgs</code></td>
+<td><code>iolake_meta_pgs</code></td>
 <td>gauge</td>
 <td><code>state</code></td>
 <td>Placement groups by the state peering last found</td>
 </tr>
 <tr>
-<td><code>objectio_meta_pgs_not_clean</code></td>
+<td><code>iolake_meta_pgs_not_clean</code></td>
 <td>gauge</td>
 <td>—</td>
 <td>Placement groups in any state but <code>Clean</code></td>
 </tr>
 <tr>
-<td><code>objectio_meta_pg_not_clean_oldest_seconds</code></td>
+<td><code>iolake_meta_pg_not_clean_oldest_seconds</code></td>
 <td>gauge</td>
 <td>—</td>
 <td>How long the PG longest out of <code>Clean</code> has been</td>
 </tr>
 <tr>
-<td><code>objectio_meta_pgs_undersized</code></td>
+<td><code>iolake_meta_pgs_undersized</code></td>
 <td>gauge</td>
 <td>—</td>
 <td>PGs with a member no OSD can stand in for within the pool's rule</td>
 </tr>
 <tr>
-<td><code>objectio_meta_osds_down</code></td>
+<td><code>iolake_meta_osds_down</code></td>
 <td>gauge</td>
 <td>—</td>
 <td>OSDs in service (<code>in</code>) that aren't up</td>
 </tr>
 <tr>
-<td><code>objectio_meta_pg_objects_degraded</code></td>
+<td><code>iolake_meta_pg_objects_degraded</code></td>
 <td>gauge</td>
 <td>—</td>
 <td>Objects some acting member of their PG lacks something of</td>
 </tr>
 <tr>
-<td><code>objectio_meta_pg_objects_unfound</code></td>
+<td><code>iolake_meta_pg_objects_unfound</code></td>
 <td>gauge</td>
 <td>—</td>
 <td>Objects with fewer complete copies than a read needs among the members that answered</td>
 </tr>
 <tr>
-<td><code>objectio_meta_pg_copies_missing</code></td>
+<td><code>iolake_meta_pg_copies_missing</code></td>
 <td>gauge</td>
 <td>—</td>
 <td>Metadata copies acting members lack</td>
 </tr>
 <tr>
-<td><code>objectio_meta_pg_shards_missing</code></td>
+<td><code>iolake_meta_pg_shards_missing</code></td>
 <td>gauge</td>
 <td>—</td>
 <td>Shards acting members should hold at their position and don't</td>
 </tr>
 <tr>
-<td><code>objectio_meta_lost_objects</code></td>
+<td><code>iolake_meta_lost_objects</code></td>
 <td>gauge</td>
 <td>—</td>
 <td>Objects recorded lost: fewer than k shards left. Above 0 is data loss</td>
 </tr>
 <tr>
-<td><code>objectio_meta_pg_peered_total</code></td>
+<td><code>iolake_meta_pg_peered_total</code></td>
 <td>counter</td>
 <td>—</td>
 <td>Placement groups peered</td>
 </tr>
 <tr>
-<td><code>objectio_meta_pg_listed_total</code></td>
+<td><code>iolake_meta_pg_listed_total</code></td>
 <td>counter</td>
 <td>—</td>
 <td>PGs whose members disagreed by summary, so were listed</td>
 </tr>
 <tr>
-<td><code>objectio_meta_pg_listings_added_total</code></td>
+<td><code>iolake_meta_pg_listings_added_total</code></td>
 <td>counter</td>
 <td>—</td>
 <td>Listing entries peering put back</td>
 </tr>
 <tr>
-<td><code>objectio_meta_pg_listings_removed_total</code></td>
+<td><code>iolake_meta_pg_listings_removed_total</code></td>
 <td>counter</td>
 <td>—</td>
 <td>Listing entries peering removed (their key was deleted)</td>
 </tr>
 <tr>
-<td><code>objectio_meta_pg_recovering</code></td>
+<td><code>iolake_meta_pg_recovering</code></td>
 <td>gauge</td>
 <td>—</td>
 <td>PGs being recovered</td>
 </tr>
 <tr>
-<td><code>objectio_meta_pg_recovery_backing_off</code></td>
+<td><code>iolake_meta_pg_recovery_backing_off</code></td>
 <td>gauge</td>
 <td>—</td>
 <td>PGs whose recovery is waiting out a backoff</td>
 </tr>
 <tr>
-<td><code>objectio_meta_pg_recovery_objects_remaining</code></td>
+<td><code>iolake_meta_pg_recovery_objects_remaining</code></td>
 <td>gauge</td>
 <td>—</td>
 <td>Objects recovery has left in the PGs it is working</td>
 </tr>
 <tr>
-<td><code>objectio_meta_pg_recovery_bytes_remaining</code></td>
+<td><code>iolake_meta_pg_recovery_bytes_remaining</code></td>
 <td>gauge</td>
 <td>—</td>
 <td>Bytes of those objects</td>
 </tr>
 <tr>
-<td><code>objectio_meta_pg_reservations</code></td>
+<td><code>iolake_meta_pg_reservations</code></td>
 <td>gauge</td>
 <td>—</td>
 <td>Recovery reservations held, as (OSD, PG) pairs</td>
 </tr>
 <tr>
-<td><code>objectio_meta_pg_reservations_refused_total</code></td>
+<td><code>iolake_meta_pg_reservations_refused_total</code></td>
 <td>counter</td>
 <td>—</td>
 <td>Times a PG couldn't reserve a slot on every OSD it needed</td>
 </tr>
 <tr>
-<td><code>objectio_meta_pg_recovery_retries_total</code></td>
+<td><code>iolake_meta_pg_recovery_retries_total</code></td>
 <td>counter</td>
 <td>—</td>
 <td>Recovery passes that got nowhere (each waits twice as long, to 5 min)</td>
 </tr>
 <tr>
-<td><code>objectio_meta_pg_too_full_total</code></td>
+<td><code>iolake_meta_pg_too_full_total</code></td>
 <td>counter</td>
 <td>—</td>
 <td>Times a PG waited for a member that was too full</td>
 </tr>
 <tr>
-<td><code>objectio_meta_pg_recovered_objects_total</code></td>
+<td><code>iolake_meta_pg_recovered_objects_total</code></td>
 <td>counter</td>
 <td>—</td>
 <td>Objects recovery made whole</td>
 </tr>
 <tr>
-<td><code>objectio_meta_pg_recovered_shards_total</code></td>
+<td><code>iolake_meta_pg_recovered_shards_total</code></td>
 <td>counter</td>
 <td>—</td>
 <td>Shards recovery wrote to the member at their position</td>
 </tr>
 <tr>
-<td><code>objectio_meta_pg_recovered_copies_total</code></td>
+<td><code>iolake_meta_pg_recovered_copies_total</code></td>
 <td>counter</td>
 <td>—</td>
 <td>Metadata copies recovery wrote</td>
 </tr>
 <tr>
-<td><code>objectio_meta_pg_replica_copies_total</code></td>
+<td><code>iolake_meta_pg_replica_copies_total</code></td>
 <td>counter</td>
 <td>—</td>
 <td>Replicated copies recovery made from an intact one</td>
 </tr>
 <tr>
-<td><code>objectio_meta_pg_remaps_total</code></td>
+<td><code>iolake_meta_pg_remaps_total</code></td>
 <td>counter</td>
 <td>—</td>
 <td>PGs moved to their <code>up</code> set</td>
 </tr>
 <tr>
-<td><code>objectio_meta_pg_lrc_rebuilds_total</code></td>
+<td><code>iolake_meta_pg_lrc_rebuilds_total</code></td>
 <td>counter</td>
 <td><code>kind</code></td>
 <td>LRC shards rebuilt, from their <code>local</code> group or the <code>global</code> stripe</td>
 </tr>
 <tr>
-<td><code>objectio_meta_pg_lrc_shards_read_total</code></td>
+<td><code>iolake_meta_pg_lrc_shards_read_total</code></td>
 <td>counter</td>
 <td><code>kind</code></td>
 <td>Shards those rebuilds read</td>
 </tr>
 <tr>
-<td><code>objectio_meta_scrub_pgs_completed_total</code></td>
+<td><code>iolake_meta_scrub_pgs_completed_total</code></td>
 <td>counter</td>
 <td>—</td>
 <td>Placement-group scrubs completed</td>
 </tr>
 <tr>
-<td><code>objectio_meta_scrub_shards_total</code></td>
+<td><code>iolake_meta_scrub_shards_total</code></td>
 <td>counter</td>
 <td>—</td>
 <td>Shards checked by PG scrubs</td>
 </tr>
 <tr>
-<td><code>objectio_meta_scrub_bytes_total</code></td>
+<td><code>iolake_meta_scrub_bytes_total</code></td>
 <td>counter</td>
 <td>—</td>
 <td>Shard bytes read back and checked by PG scrubs</td>
 </tr>
 <tr>
-<td><code>objectio_meta_scrub_shards_bad_total</code></td>
+<td><code>iolake_meta_scrub_shards_bad_total</code></td>
 <td>counter</td>
 <td><code>reason</code></td>
 <td>Shards a scrub found <code>missing</code> or <code>corrupt</code> (recovery rebuilds them)</td>
 </tr>
 <tr>
-<td><code>objectio_meta_scrub_errors_total</code></td>
+<td><code>iolake_meta_scrub_errors_total</code></td>
 <td>counter</td>
 <td>—</td>
 <td>Scrub steps a member couldn't take; retried</td>
 </tr>
 <tr>
-<td><code>objectio_meta_scrub_pgs_never</code></td>
+<td><code>iolake_meta_scrub_pgs_never</code></td>
 <td>gauge</td>
 <td>—</td>
 <td>PGs not yet scrubbed</td>
 </tr>
 <tr>
-<td><code>objectio_meta_scrub_oldest_seconds</code></td>
+<td><code>iolake_meta_scrub_oldest_seconds</code></td>
 <td>gauge</td>
 <td>—</td>
 <td>Age of the oldest completed PG scrub</td>
@@ -4863,103 +5005,103 @@ nodes. The states are peering's (<code>Down</code>, <code>Incomplete</code>,
 </thead>
 <tbody>
 <tr>
-<td><code>objectio_osd_corrupt_shards</code></td>
+<td><code>iolake_osd_corrupt_shards</code></td>
 <td>gauge</td>
 <td>—</td>
 <td>Corrupt shards on this OSD not yet rebuilt</td>
 </tr>
 <tr>
-<td><code>objectio_osd_corrupt_shards_found_total</code></td>
+<td><code>iolake_osd_corrupt_shards_found_total</code></td>
 <td>counter</td>
 <td>—</td>
 <td>Shards found failing their checksum, by the scrubber or a read</td>
 </tr>
 <tr>
-<td><code>objectio_osd_disk_seconds</code></td>
+<td><code>iolake_osd_disk_seconds</code></td>
 <td>histogram</td>
 <td><code>op,</code></td>
 <td>Time of one shard disk operation: write, sync (before the write is acknowledged), read</td>
 </tr>
 <tr>
-<td><code>objectio_osd_grpc_bytes_received_total</code></td>
+<td><code>iolake_osd_grpc_bytes_received_total</code></td>
 <td>counter</td>
 <td><code>method,</code></td>
 <td>Bytes of shard requests received, by method</td>
 </tr>
 <tr>
-<td><code>objectio_osd_grpc_bytes_sent_total</code></td>
+<td><code>iolake_osd_grpc_bytes_sent_total</code></td>
 <td>counter</td>
 <td><code>method,</code></td>
 <td>Bytes of shard responses sent, by method</td>
 </tr>
 <tr>
-<td><code>objectio_osd_grpc_latency_seconds</code></td>
+<td><code>iolake_osd_grpc_latency_seconds</code></td>
 <td>histogram</td>
 <td><code>method,</code></td>
 <td>Time this OSD took to answer a gRPC call, by method</td>
 </tr>
 <tr>
-<td><code>objectio_osd_grpc_requests_total</code></td>
+<td><code>iolake_osd_grpc_requests_total</code></td>
 <td>counter</td>
 <td><code>code, method,</code></td>
 <td>gRPC calls this OSD served, by method and status code</td>
 </tr>
 <tr>
-<td><code>objectio_osd_info</code></td>
+<td><code>iolake_osd_info</code></td>
 <td>gauge</td>
 <td><code>datacenter, node, rack, region</code></td>
 <td>OSD information</td>
 </tr>
 <tr>
-<td><code>objectio_osd_scrub_bytes_total</code></td>
+<td><code>iolake_osd_scrub_bytes_total</code></td>
 <td>counter</td>
 <td>—</td>
 <td>Bytes read and checked by the scrubber</td>
 </tr>
 <tr>
-<td><code>objectio_osd_scrub_last_pass_seconds</code></td>
+<td><code>iolake_osd_scrub_last_pass_seconds</code></td>
 <td>gauge</td>
 <td>—</td>
 <td>How long the last completed scrub pass took</td>
 </tr>
 <tr>
-<td><code>objectio_osd_scrub_last_pass_timestamp_seconds</code></td>
+<td><code>iolake_osd_scrub_last_pass_timestamp_seconds</code></td>
 <td>gauge</td>
 <td>—</td>
 <td>When the last scrub pass completed (Unix time; 0: none yet)</td>
 </tr>
 <tr>
-<td><code>objectio_osd_scrub_passes_total</code></td>
+<td><code>iolake_osd_scrub_passes_total</code></td>
 <td>counter</td>
 <td>—</td>
 <td>Completed scrub passes</td>
 </tr>
 <tr>
-<td><code>objectio_osd_scrub_shards_total</code></td>
+<td><code>iolake_osd_scrub_shards_total</code></td>
 <td>counter</td>
 <td>—</td>
 <td>Shards read and checked by the scrubber</td>
 </tr>
 <tr>
-<td><code>objectio_osd_shards_total</code></td>
+<td><code>iolake_osd_shards_total</code></td>
 <td>gauge</td>
 <td>—</td>
 <td>Total shards stored</td>
 </tr>
 <tr>
-<td><code>objectio_osd_wal_fsync_seconds</code></td>
+<td><code>iolake_osd_wal_fsync_seconds</code></td>
 <td>histogram</td>
 <td>—</td>
 <td>Time for one metadata WAL fdatasync</td>
 </tr>
 <tr>
-<td><code>objectio_osd_wal_records_synced_total</code></td>
+<td><code>iolake_osd_wal_records_synced_total</code></td>
 <td>counter</td>
 <td>—</td>
 <td>Metadata WAL records made durable; divide by syncs for records per fsync</td>
 </tr>
 <tr>
-<td><code>objectio_osd_wal_syncs_total</code></td>
+<td><code>iolake_osd_wal_syncs_total</code></td>
 <td>counter</td>
 <td>—</td>
 <td>Metadata WAL fdatasyncs</td>
@@ -4979,115 +5121,115 @@ nodes. The states are peering's (<code>Down</code>, <code>Incomplete</code>,
 </thead>
 <tbody>
 <tr>
-<td><code>objectio_disk_available_bytes</code></td>
+<td><code>iolake_disk_available_bytes</code></td>
 <td>gauge</td>
 <td><code>disk,</code></td>
 <td>Free bytes on the disk</td>
 </tr>
 <tr>
-<td><code>objectio_disk_capacity_bytes</code></td>
+<td><code>iolake_disk_capacity_bytes</code></td>
 <td>gauge</td>
 <td><code>disk,</code></td>
 <td>Disk capacity</td>
 </tr>
 <tr>
-<td><code>objectio_disk_errors_total</code></td>
+<td><code>iolake_disk_errors_total</code></td>
 <td>counter</td>
 <td><code>disk, type</code></td>
 <td><code>read</code>: failed reads; <code>write</code>: failed writes and flushes; <code>checksum</code>: checksum mismatches</td>
 </tr>
 <tr>
-<td><code>objectio_disk_healthy</code></td>
+<td><code>iolake_disk_healthy</code></td>
 <td>gauge</td>
 <td><code>disk,</code></td>
 <td>Disk health status (1=healthy, 0=unhealthy)</td>
 </tr>
 <tr>
-<td><code>objectio_disk_read_bytes_total</code></td>
+<td><code>iolake_disk_read_bytes_total</code></td>
 <td>counter</td>
 <td><code>disk,</code></td>
 <td>Bytes read</td>
 </tr>
 <tr>
-<td><code>objectio_disk_reads_total</code></td>
+<td><code>iolake_disk_reads_total</code></td>
 <td>counter</td>
 <td><code>disk,</code></td>
 <td>Shard reads</td>
 </tr>
 <tr>
-<td><code>objectio_disk_shards_total</code></td>
+<td><code>iolake_disk_shards_total</code></td>
 <td>gauge</td>
 <td><code>disk,</code></td>
 <td>Shards on disk</td>
 </tr>
 <tr>
-<td><code>objectio_disk_smart_check_errors_total</code></td>
+<td><code>iolake_disk_smart_check_errors_total</code></td>
 <td>counter</td>
 <td>—</td>
 <td>SMART checks that failed (no smartctl, unsupported device)</td>
 </tr>
 <tr>
-<td><code>objectio_disk_smart_checks_total</code></td>
+<td><code>iolake_disk_smart_checks_total</code></td>
 <td>counter</td>
 <td>—</td>
 <td>SMART checks run</td>
 </tr>
 <tr>
-<td><code>objectio_disk_smart_health_score</code></td>
+<td><code>iolake_disk_smart_health_score</code></td>
 <td>gauge</td>
 <td><code>device</code></td>
 <td>SMART-derived health score</td>
 </tr>
 <tr>
-<td><code>objectio_disk_smart_healthy</code></td>
+<td><code>iolake_disk_smart_healthy</code></td>
 <td>gauge</td>
 <td><code>device</code></td>
 <td>SMART overall health (1 healthy); only where smartctl is installed</td>
 </tr>
 <tr>
-<td><code>objectio_disk_smart_pending_sectors</code></td>
+<td><code>iolake_disk_smart_pending_sectors</code></td>
 <td>gauge</td>
 <td><code>device</code></td>
 <td>Sectors pending reallocation</td>
 </tr>
 <tr>
-<td><code>objectio_disk_smart_power_on_hours</code></td>
+<td><code>iolake_disk_smart_power_on_hours</code></td>
 <td>counter</td>
 <td><code>device</code></td>
 <td>Drive power-on hours</td>
 </tr>
 <tr>
-<td><code>objectio_disk_smart_predicted_failure_days</code></td>
+<td><code>iolake_disk_smart_predicted_failure_days</code></td>
 <td>gauge</td>
 <td><code>device</code></td>
 <td>Predicted days to failure, when SMART data allows a prediction</td>
 </tr>
 <tr>
-<td><code>objectio_disk_smart_reallocated_sectors</code></td>
+<td><code>iolake_disk_smart_reallocated_sectors</code></td>
 <td>gauge</td>
 <td><code>device</code></td>
 <td>Reallocated sectors: a rising count predicts failure</td>
 </tr>
 <tr>
-<td><code>objectio_disk_smart_temperature_celsius</code></td>
+<td><code>iolake_disk_smart_temperature_celsius</code></td>
 <td>gauge</td>
 <td><code>device</code></td>
 <td>Drive temperature</td>
 </tr>
 <tr>
-<td><code>objectio_disk_used_bytes</code></td>
+<td><code>iolake_disk_used_bytes</code></td>
 <td>gauge</td>
 <td><code>disk,</code></td>
 <td>Disk used space</td>
 </tr>
 <tr>
-<td><code>objectio_disk_writes_total</code></td>
+<td><code>iolake_disk_writes_total</code></td>
 <td>counter</td>
 <td><code>disk,</code></td>
 <td>Shard writes</td>
 </tr>
 <tr>
-<td><code>objectio_disk_written_bytes_total</code></td>
+<td><code>iolake_disk_written_bytes_total</code></td>
 <td>counter</td>
 <td><code>disk,</code></td>
 <td>Bytes written</td>
@@ -5107,7 +5249,7 @@ nodes. The states are peering's (<code>Down</code>, <code>Incomplete</code>,
 </thead>
 <tbody>
 <tr>
-<td><code>objectio_build_info</code></td>
+<td><code>iolake_build_info</code></td>
 <td>gauge</td>
 <td><code>commit, version</code></td>
 <td>Build version and commit; always 1</td>
@@ -5139,15 +5281,15 @@ nodes. The states are peering's (<code>Down</code>, <code>Incomplete</code>,
 </tbody>
 </table>
 <h2 id="alerts">Alerts<a class="headerlink" href="#alerts" title="Permanent link">&para;</a></h2>
-<p>The chart ships the alert rules (<code>deploy/helm/objectio/alerts/objectio-rules.yaml</code>
+<p>The chart ships the alert rules (<code>deploy/helm/iolake/alerts/iolake-rules.yaml</code>
 in the code repo). <a href="../production/#alerts">Production</a> lists them, with a
 runbook for each.</p>
 <h2 id="known-gaps">Known gaps<a class="headerlink" href="#known-gaps" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Gateway to meta calls</strong> are measured only on meta's side
-  (<code>objectio_meta_grpc_latency_seconds</code>), which leaves out network time.</li>
+  (<code>iolake_meta_grpc_latency_seconds</code>), which leaves out network time.</li>
 <li><strong>Lifecycle expiry</strong> deletes an object's metadata but not its shards
-  (a known leak); <code>objectio_lifecycle_actions_total{action="expire"}</code>
+  (a known leak); <code>iolake_lifecycle_actions_total{action="expire"}</code>
   counts the deletes, and the space they leave is not reclaimed yet.</li>
 <li><strong>The Transfer Engine (RDMA) path</strong> reports transfers and fallbacks, but
   not its own latency.</li>
@@ -5209,10 +5351,10 @@ runbook for each.</p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.sections", "navigation.top", "search.highlight", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "dev", "provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.sections", "navigation.top", "search.highlight", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "dev", "provider": "mike"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.c21346df.min.js"></script>
       
         <script src="../../installation/sizing-calculator.js"></script>
       

@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://object-io.github.io/0.1/operations-guide/operations/production/">
+        <link rel="canonical" href="https://iolake.dev/0.1/operations-guide/operations/production/">
       
       
         <link rel="prev" href="../monitoring/">
@@ -20,19 +20,19 @@
         
       
       
-      <link rel="icon" href="../../../assets/brand/favicon.svg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <link rel="icon" href="../../../assets/brand/iolake-favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
     
     
       
-        <title>Running ObjectIO in production - ObjectIO</title>
+        <title>Running IOLake in production - IOLake</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -71,7 +71,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#running-objectio-in-production" class="md-skip">
+        <a href="#running-iolake-in-production" class="md-skip">
           Skip to content
         </a>
       
@@ -100,9 +100,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="ObjectIO" class="md-header__button md-logo" aria-label="ObjectIO" data-md-component="logo">
+    <a href="../../.." title="IOLake" class="md-header__button md-logo" aria-label="IOLake" data-md-component="logo">
       
-  <img src="../../../assets/brand/objectio-mark-on-dark.svg" alt="logo">
+  <img src="../../../assets/brand/iolake-mark-dark.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -113,13 +113,13 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            ObjectIO
+            IOLake
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Running ObjectIO in production
+              Running IOLake in production
             
           </span>
         </div>
@@ -132,7 +132,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Dark mode"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Dark mode"  type="radio" name="__palette" id="__palette_0">
     
       <label class="md-header__button md-icon" title="Dark mode" for="__palette_1" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
@@ -142,7 +142,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Light mode"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Light mode"  type="radio" name="__palette" id="__palette_1">
     
       <label class="md-header__button md-icon" title="Light mode" for="__palette_0" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
@@ -199,13 +199,13 @@
     
     
       <div class="md-header__source">
-        <a href="https://github.com/object-io/objectio" title="Go to repository" class="md-source" data-md-component="source">
+        <a href="https://github.com/io-lake/iolake" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
   </div>
   <div class="md-source__repository">
-    object-io/objectio
+    io-lake/iolake
   </div>
 </a>
       </div>
@@ -235,22 +235,22 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="ObjectIO" class="md-nav__button md-logo" aria-label="ObjectIO" data-md-component="logo">
+    <a href="../../.." title="IOLake" class="md-nav__button md-logo" aria-label="IOLake" data-md-component="logo">
       
-  <img src="../../../assets/brand/objectio-mark-on-dark.svg" alt="logo">
+  <img src="../../../assets/brand/iolake-mark-dark.svg" alt="logo">
 
     </a>
-    ObjectIO
+    IOLake
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/object-io/objectio" title="Go to repository" class="md-source" data-md-component="source">
+      <a href="https://github.com/io-lake/iolake" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
   </div>
   <div class="md-source__repository">
-    object-io/objectio
+    io-lake/iolake
   </div>
 </a>
     </div>
@@ -271,7 +271,7 @@
   <span class="md-ellipsis">
     
   
-    ObjectIO
+    IOLake
   
 
     
@@ -298,7 +298,7 @@
   <span class="md-ellipsis">
     
   
-    ObjectIO roadmap
+    IOLake roadmap
   
 
     
@@ -325,7 +325,7 @@
   <span class="md-ellipsis">
     
   
-    ObjectIO features
+    IOLake features
   
 
     
@@ -515,7 +515,7 @@
   <span class="md-ellipsis">
     
   
-    ObjectIO — Feature Reference
+    IOLake — Feature Reference
   
 
     
@@ -895,7 +895,7 @@
   <span class="md-ellipsis">
     
   
-    ceph s3-tests against ObjectIO, run 2
+    ceph s3-tests against IOLake, run 2
   
 
     
@@ -1712,6 +1712,148 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_8_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_8_8" id="__nav_5_8_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2026 11 05
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_8_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_8_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    2026 11 05
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_8_8_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_8_8_1" id="__nav_5_8_8_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Linux amd64
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_5_8_8_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_8_8_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Linux amd64
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../developer-guide/s3-compatibility/2026-11-05/linux-amd64/summary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ceph s3-tests results
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1984,7 +2126,7 @@
   <span class="md-ellipsis">
     
   
-    CLI (obioctl)
+    CLI (iolakectl)
   
 
     
@@ -2321,7 +2463,7 @@
   <span class="md-ellipsis">
     
   
-    ObjectIO Deployment Options
+    IOLake Deployment Options
   
 
     
@@ -2753,7 +2895,7 @@
   <span class="md-ellipsis">
     
   
-    Running ObjectIO in production
+    Running IOLake in production
   
 
     
@@ -2771,7 +2913,7 @@
   <span class="md-ellipsis">
     
   
-    Running ObjectIO in production
+    Running IOLake in production
   
 
     
@@ -3477,7 +3619,7 @@
   
 
 
-<h1 id="running-objectio-in-production">Running ObjectIO in production<a class="headerlink" href="#running-objectio-in-production" title="Permanent link">&para;</a></h1>
+<h1 id="running-iolake-in-production">Running IOLake in production<a class="headerlink" href="#running-iolake-in-production" title="Permanent link">&para;</a></h1>
 <p>What a production cluster needs, how to size it, what to alert on, and
 what to do when each alert fires. Read it with the
 <a href="../failure-recovery/">failure-recovery</a>, <a href="../meta-ha/">meta HA</a>,
@@ -3579,7 +3721,7 @@ without end or running out of memory.</p>
   response headers are sent: a failure there is still an error status. A
   stripe that can't be read after the headers ends the connection short
   of <code>Content-Length</code>, never with wrong bytes, and is counted in
-  <code>objectio_gateway_get_aborted_total</code>. A client sees a short read, which
+  <code>iolake_gateway_get_aborted_total</code>. A client sees a short read, which
   SDKs retry.</li>
 <li><strong>Large uploads stream.</strong> A PUT or an UploadPart over 16 MiB (up to
   S3's 5 GiB) is never held whole: its body is erasure-coded and written
@@ -3613,12 +3755,12 @@ without end or running out of memory.</p>
 a scrape always reaches an overloaded gateway.</p>
 <p>To size it: a gateway needs about twice its budget, plus its baseline
 (about 100 MB). Give each gateway a memory limit; the budget follows it.
-Steady <code>SlowDown</code>s, seen in <code>objectio_gateway_requests_rejected_total</code>
+Steady <code>SlowDown</code>s, seen in <code>iolake_gateway_requests_rejected_total</code>
 by <code>reason</code>, mean the gateway is short of memory (<code>memory</code>) or of request
 slots (<code>requests</code>): add gateways, or raise the limit. The budget in use is
-<code>objectio_gateway_memory_budget_in_use_bytes</code>.</p>
+<code>iolake_gateway_memory_budget_in_use_bytes</code>.</p>
 <h2 id="alerts">Alerts<a class="headerlink" href="#alerts" title="Permanent link">&para;</a></h2>
-<p>The chart ships the rules in <code>deploy/helm/objectio/alerts/objectio-rules.yaml</code>:
+<p>The chart ships the rules in <code>deploy/helm/iolake/alerts/iolake-rules.yaml</code>:
 - its own Prometheus loads them when <code>monitoring.enabled</code> is set;
 - <code>monitoring.prometheusRule.enabled</code> also publishes them as a
   <code>PrometheusRule</code> for a prometheus-operator.</p>
@@ -3633,152 +3775,152 @@ slots (<code>requests</code>): add gateways, or raise the limit. The budget in u
 </thead>
 <tbody>
 <tr>
-<td>ObjectIOObjectsUnreadable</td>
+<td>IOLakeObjectsUnreadable</td>
 <td>critical</td>
 <td><a href="#objects-unreadable-or-unrecoverable">Objects unreadable</a></td>
 </tr>
 <tr>
-<td>ObjectIOUnrecoverableStripes</td>
+<td>IOLakeUnrecoverableStripes</td>
 <td>critical</td>
 <td><a href="#objects-unreadable-or-unrecoverable">Objects unreadable</a></td>
 </tr>
 <tr>
-<td>ObjectIOObjectsAtRisk</td>
+<td>IOLakeObjectsAtRisk</td>
 <td>warning</td>
 <td><a href="#an-osd-is-down">OSD down</a></td>
 </tr>
 <tr>
-<td>ObjectIORepairNotRunning</td>
+<td>IOLakeRepairNotRunning</td>
 <td>warning</td>
 <td><a href="#repair-not-running">Repair not running</a></td>
 </tr>
 <tr>
-<td>ObjectIOScrubStale</td>
+<td>IOLakeScrubStale</td>
 <td>warning</td>
 <td><a href="#repair-not-running">Repair not running</a></td>
 </tr>
 <tr>
-<td>ObjectIOCorruptShards</td>
+<td>IOLakeCorruptShards</td>
 <td>warning</td>
 <td><a href="#corrupt-shards">Corrupt shards</a></td>
 </tr>
 <tr>
-<td>ObjectIOPgDown</td>
+<td>IOLakePgDown</td>
 <td>critical</td>
 <td><a href="#placement-groups-down-incomplete-or-undersized">Placement groups</a></td>
 </tr>
 <tr>
-<td>ObjectIOPgIncomplete</td>
+<td>IOLakePgIncomplete</td>
 <td>critical</td>
 <td><a href="#placement-groups-down-incomplete-or-undersized">Placement groups</a></td>
 </tr>
 <tr>
-<td>ObjectIOObjectsUnfound</td>
-<td>critical</td>
-<td><a href="#objects-unreadable-or-unrecoverable">Objects unreadable</a></td>
-</tr>
-<tr>
-<td>ObjectIOObjectsLost</td>
+<td>IOLakeObjectsUnfound</td>
 <td>critical</td>
 <td><a href="#objects-unreadable-or-unrecoverable">Objects unreadable</a></td>
 </tr>
 <tr>
-<td>ObjectIOPgNotCleanWithOsdsUp</td>
+<td>IOLakeObjectsLost</td>
+<td>critical</td>
+<td><a href="#objects-unreadable-or-unrecoverable">Objects unreadable</a></td>
+</tr>
+<tr>
+<td>IOLakePgNotCleanWithOsdsUp</td>
 <td>warning</td>
 <td><a href="#placement-groups-down-incomplete-or-undersized">Placement groups</a></td>
 </tr>
 <tr>
-<td>ObjectIOPgUndersized</td>
+<td>IOLakePgUndersized</td>
 <td>warning</td>
 <td><a href="#placement-groups-down-incomplete-or-undersized">Placement groups</a></td>
 </tr>
 <tr>
-<td>ObjectIOPgScrubStale</td>
+<td>IOLakePgScrubStale</td>
 <td>warning</td>
 <td><a href="#repair-not-running">Repair not running</a></td>
 </tr>
 <tr>
-<td>ObjectIOMetaNoLeader</td>
+<td>IOLakeMetaNoLeader</td>
 <td>critical</td>
 <td><a href="#meta-has-no-leader-or-elects-often">Meta</a></td>
 </tr>
 <tr>
-<td>ObjectIOMetaElectionsChurn</td>
+<td>IOLakeMetaElectionsChurn</td>
 <td>warning</td>
 <td><a href="#meta-has-no-leader-or-elects-often">Meta</a></td>
 </tr>
 <tr>
-<td>ObjectIOMetaFollowerLagging</td>
+<td>IOLakeMetaFollowerLagging</td>
 <td>warning</td>
 <td><a href="#meta-has-no-leader-or-elects-often">Meta</a></td>
 </tr>
 <tr>
-<td>ObjectIOHealQueueFailing</td>
+<td>IOLakeHealQueueFailing</td>
 <td>warning</td>
 <td><a href="#meta-has-no-leader-or-elects-often">Meta</a></td>
 </tr>
 <tr>
-<td>ObjectIOMetaDiskLow</td>
+<td>IOLakeMetaDiskLow</td>
 <td>warning</td>
 <td><a href="#disks-filling-or-full">Disks filling</a></td>
 </tr>
 <tr>
-<td>ObjectIOMetaDiskFull</td>
+<td>IOLakeMetaDiskFull</td>
 <td>critical</td>
 <td><a href="#disks-filling-or-full">Disks filling</a></td>
 </tr>
 <tr>
-<td>ObjectIOGatewayClockSkewed</td>
+<td>IOLakeGatewayClockSkewed</td>
 <td>critical</td>
 <td><a href="#a-gateway-refuses-writes-for-clock-skew">Clock skew</a></td>
 </tr>
 <tr>
-<td>ObjectIOOsdDown</td>
+<td>IOLakeOsdDown</td>
 <td>warning</td>
 <td><a href="#an-osd-is-down">OSD down</a></td>
 </tr>
 <tr>
-<td>ObjectIODiskNearFull</td>
+<td>IOLakeDiskNearFull</td>
 <td>warning</td>
 <td><a href="#disks-filling-or-full">Disks filling</a></td>
 </tr>
 <tr>
-<td>ObjectIODiskFull</td>
+<td>IOLakeDiskFull</td>
 <td>critical</td>
 <td><a href="#disks-filling-or-full">Disks filling</a></td>
 </tr>
 <tr>
-<td>ObjectIOClusterFilling</td>
+<td>IOLakeClusterFilling</td>
 <td>warning</td>
 <td><a href="#disks-filling-or-full">Disks filling</a></td>
 </tr>
 <tr>
-<td>ObjectIOSlowShardSync</td>
+<td>IOLakeSlowShardSync</td>
 <td>warning</td>
 <td><a href="#a-slow-disk">Slow disk</a></td>
 </tr>
 <tr>
-<td>ObjectIOS3ServerErrors</td>
+<td>IOLakeS3ServerErrors</td>
 <td>warning</td>
 <td><a href="#s3-requests-failing-with-5xx">5xx</a></td>
 </tr>
 <tr>
-<td>ObjectIOSpaceLeaking</td>
+<td>IOLakeSpaceLeaking</td>
 <td>info</td>
 <td><a href="#s3-requests-failing-with-5xx">5xx</a></td>
 </tr>
 <tr>
-<td>ObjectIOAuditEventsDropped</td>
+<td>IOLakeAuditEventsDropped</td>
 <td>warning</td>
 <td><a href="#audit-events-dropped">Audit</a></td>
 </tr>
 <tr>
-<td>ObjectIOReplicationLagging</td>
+<td>IOLakeReplicationLagging</td>
 <td>warning</td>
 <td><a href="#replication-lagging">Replication</a></td>
 </tr>
 <tr>
-<td>ObjectIOSlowBlockJournal, ObjectIOBlockFlushFailing, ObjectIOBlockReadErrors</td>
+<td>IOLakeSlowBlockJournal, IOLakeBlockFlushFailing, IOLakeBlockReadErrors</td>
 <td></td>
 <td><a href="#block-volumes">Block</a></td>
 </tr>
@@ -3787,7 +3929,7 @@ slots (<code>requests</code>): add gateways, or raise the limit. The budget in u
 <p><strong>Not covered by any alert yet:</strong> certificate expiry (no metric; watch
 cert-manager's own) and the audit spool's size.</p>
 <h2 id="runbooks">Runbooks<a class="headerlink" href="#runbooks" title="Permanent link">&para;</a></h2>
-<p>Commands are <code>obioctl</code> (a SigV4 client of the gateway's admin API,
+<p>Commands are <code>iolakectl</code> (a SigV4 client of the gateway's admin API,
 <code>bin/cli/README.md</code> in the code repo) and meta's admin port (9102;
 under <a href="../../administration/mtls/#metas-admin-port">mTLS</a> HTTPS, and
 membership changes take a certificate of role <code>admin</code>).</p>
@@ -3805,13 +3947,13 @@ membership changes take a certificate of role <code>admin</code>).</p>
   full redundancy without the down OSD. A position no OSD can take leaves
   the PG <code>Undersized</code>.</p>
 <p><strong>What you do.</strong>
-1. <code>obioctl node list</code>: which OSD, and since when.
-2. If the process died: restart it (<code>systemctl restart objectio-osd</code>, or
+1. <code>iolakectl node list</code>: which OSD, and since when.
+2. If the process died: restart it (<code>systemctl restart iolake-osd</code>, or
    the pod). Back within 120 s, it rejoins and recovery brings it up to
    date with what was written while it was gone.
-3. If the host or drive is gone for good: <code>obioctl osd set-state &lt;node_id&gt;
+3. If the host or drive is gone for good: <code>iolakectl osd set-state &lt;node_id&gt;
    out</code>, so it is no longer counted as in service. Its PGs already have
-   stand-ins; watch them backfill (<code>obioctl pg list --state Degraded</code>).
+   stand-ins; watch them backfill (<code>iolakectl pg list --state Degraded</code>).
 4. If it won't start, and its log says its metadata log is damaged
    ("damage, not a torn append", or records missing): what it holds can't
    be trusted. Treat it as a failed drive (step 3, then
@@ -3821,14 +3963,14 @@ membership changes take a certificate of role <code>admin</code>).</p>
 write until it is reopened" in its log) stays up but refuses every write.
 Restart it: the restart finds where the log really ends. If it happens
 again, the drive is failing; replace it.</p>
-<p><strong>Done when</strong> <code>ObjectIOObjectsAtRisk</code> clears and every placement group
-is <code>Clean</code> again (<code>objectio_meta_pgs_not_clean</code> 0).</p>
+<p><strong>Done when</strong> <code>IOLakeObjectsAtRisk</code> clears and every placement group
+is <code>Clean</code> again (<code>iolake_meta_pgs_not_clean</code> 0).</p>
 <h3 id="replacing-a-disk">Replacing a disk<a class="headerlink" href="#replacing-a-disk" title="Permanent link">&para;</a></h3>
 <ol>
-<li>If the disk still reads: <code>obioctl osd set-state &lt;node_id&gt; draining</code>,
-   and wait for <code>obioctl cluster drain-status</code> to show it empty. It turns
+<li>If the disk still reads: <code>iolakectl osd set-state &lt;node_id&gt; draining</code>,
+   and wait for <code>iolakectl cluster drain-status</code> to show it empty. It turns
    <code>out</code> by itself.</li>
-<li>If it doesn't read: <code>obioctl osd set-state &lt;node_id&gt; out</code>.</li>
+<li>If it doesn't read: <code>iolakectl osd set-state &lt;node_id&gt; out</code>.</li>
 <li>Swap the drive and start the OSD on it with the same state directory:
    it keeps its identity, finds the disk blank, and forgets the shards it
    held there. On an OSD with several disks, the blank disk takes the
@@ -3837,7 +3979,7 @@ is <code>Clean</code> again (<code>objectio_meta_pgs_not_clean</code> 0).</p>
    the old one, made before the OSD starts
    (<code>truncate -s &lt;size&gt; /data/disk0/disk.raw</code>): an OSD makes a disk file
    itself only on its first start.</li>
-<li><code>obioctl osd set-state &lt;node_id&gt; in</code>. Repair rebuilds what it held.</li>
+<li><code>iolakectl osd set-state &lt;node_id&gt; in</code>. Repair rebuilds what it held.</li>
 </ol>
 <h3 id="an-osd-that-wont-start-for-a-missing-disk">An OSD that won't start for a missing disk<a class="headerlink" href="#an-osd-that-wont-start-for-a-missing-disk" title="Permanent link">&para;</a></h3>
 <p>An OSD knows its disks by the ids in their superblocks, not by their
@@ -3854,25 +3996,25 @@ Running on the rest would look for shards on the wrong disks.</p>
   <a href="#replacing-a-disk">above</a>.</li>
 <li><strong>No replacement, and the OSD should run on the disks it has left:</strong>
   that is a new OSD. Set the old one <code>out</code>, wait until
-  <code>obioctl cluster drain-status</code> shows it evacuated, then wipe its state
+  <code>iolakectl cluster drain-status</code> shows it evacuated, then wipe its state
   directory and its remaining disks and start it on them: it joins as a
   new OSD.</li>
 </ul>
 <p>It also refuses a disk that is not blank and not one of its own (another
 OSD's, or one replaced earlier and put back): remove it from the OSD's
 disks, or wipe it to add it as a new disk. A disk named with <code>--disks</code>
-that can't be read as an ObjectIO disk stops the OSD, rather than being
+that can't be read as an IOLake disk stops the OSD, rather than being
 skipped.</p>
 <h3 id="disks-filling-or-full">Disks filling or full<a class="headerlink" href="#disks-filling-or-full" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>Near full (85%).</strong> Plan capacity: add OSDs or hosts (the balancer
-  moves data onto them), or delete data. Check <code>obioctl cluster usage</code>.</li>
+  moves data onto them), or delete data. Check <code>iolakectl cluster usage</code>.</li>
 <li><strong>Full (95%).</strong> That OSD refuses client writes and clients get 507.
   The space above 95% is kept for repair. Other OSDs keep taking writes for
   stripes not placed on the full one.</li>
-<li>Find which disks: <code>objectio_disk_used_bytes / objectio_disk_capacity_bytes</code>.</li>
+<li>Find which disks: <code>iolake_disk_used_bytes / iolake_disk_capacity_bytes</code>.</li>
 <li>One full disk among emptier ones is uneven placement: the balancer
-    evens it out (<code>obioctl cluster rebalance status</code>).</li>
+    evens it out (<code>iolakectl cluster rebalance status</code>).</li>
 <li>Everything full: add capacity. Deletes free space within a minute.</li>
 <li>Don't raise <code>--full-ratio</code> to get writes going: it spends the room
     repair needs after the next failure.</li>
@@ -3883,8 +4025,8 @@ skipped.</p>
   or on raw devices. If the OSD logs that its metadata log <code>takes no
   writes after an earlier failure</code>, an <code>fsync</code> failed: restart it once
   there is room.</li>
-<li><strong>Meta's disk low or full</strong> (<code>ObjectIOMetaDiskLow</code>: under twice the
-  reserve for 10 minutes; <code>ObjectIOMetaDiskFull</code>: under the reserve).
+<li><strong>Meta's disk low or full</strong> (<code>IOLakeMetaDiskLow</code>: under twice the
+  reserve for 10 minutes; <code>IOLakeMetaDiskFull</code>: under the reserve).
   Under the reserve (<code>--min-free-mib</code>, 1 GiB) the meta leader refuses
   writes that need meta, 507, and a follower falls behind; reads and
   object PUTs go on
@@ -3904,7 +4046,7 @@ skipped.</p>
 </ul>
 <h3 id="a-gateway-refuses-writes-for-clock-skew">A gateway refuses writes for clock skew<a class="headerlink" href="#a-gateway-refuses-writes-for-clock-skew" title="Permanent link">&para;</a></h3>
 <p>Its clock is more than 500 ms from meta's
-(<code>objectio_gateway_clock_offset_seconds</code> gives the offset). Writes through
+(<code>iolake_gateway_clock_offset_seconds</code> gives the offset). Writes through
 it fail with 503 (clients retry, ideally through another gateway). Reads
 work.</p>
 <p>Fix time sync on that host (<code>chronyc tracking</code>, <code>chronyc makestep</code>).
@@ -3923,7 +4065,7 @@ restart the gateway: it doesn't help.</p>
 <li><strong>No procedure exists yet</strong> for a majority lost for good.</li>
 <li><strong>Elections churn:</strong> usually a node that drops off the network
   intermittently, or a disk too slow for its heartbeats. Compare the
-  nodes' <code>objectio_meta_commit_seconds</code>.</li>
+  nodes' <code>iolake_meta_commit_seconds</code>.</li>
 <li><strong>A follower lags:</strong> it is catching up, or its disk is slow. One far
   behind is sent a snapshot.</li>
 <li><strong>Heal queue failing:</strong> writes reached a quorum of metadata copies while
@@ -3931,7 +4073,7 @@ restart the gateway: it doesn't help.</p>
   Persistent failures mean meta is down: see above.</li>
 </ul>
 <h3 id="repair-not-running">Repair not running<a class="headerlink" href="#repair-not-running" title="Permanent link">&para;</a></h3>
-<p><code>objectio_meta_repair_last_pass_timestamp_seconds</code> hasn't moved in three
+<p><code>iolake_meta_repair_last_pass_timestamp_seconds</code> hasn't moved in three
 repair intervals (<code>--repair-interval-secs</code>, an hour by default). Repair
 runs on the meta leader:
 - check that there is one (above);
@@ -3943,17 +4085,17 @@ OSD's log; a pass on a very full disk at 50 MiB/s
 (<code>--scrub-rate-mib</code>) can take days.</p>
 <p>PG scrub stale: a placement group hasn't been scrubbed in two weeks
 (twice <code>scrub/every_seconds</code>, 7 days). Placement-group scrubs run from the
-meta leader; check that there is one, and its log. <code>obioctl pg scrub
+meta leader; check that there is one, and its log. <code>iolakectl pg scrub
 &lt;pg_id&gt;</code> scrubs one now.</p>
 <h3 id="corrupt-shards">Corrupt shards<a class="headerlink" href="#corrupt-shards" title="Permanent link">&para;</a></h3>
 <p>Scrub or a read found shards that don't match their checksums. The OSD
 reports them, and repair rebuilds them from the rest of the stripe. If the
 count keeps rising on one OSD, its drive is failing: check its SMART
-metrics (<code>objectio_disk_smart_*</code>) and replace it (<a href="#replacing-a-disk">above</a>).</p>
+metrics (<code>iolake_disk_smart_*</code>) and replace it (<a href="#replacing-a-disk">above</a>).</p>
 <h3 id="placement-groups-down-incomplete-or-undersized">Placement groups down, incomplete or undersized<a class="headerlink" href="#placement-groups-down-incomplete-or-undersized" title="Permanent link">&para;</a></h3>
 <p>Peering, on the meta leader, gives each placement group a state.
-<code>obioctl pg list --pool &lt;pool&gt; --state &lt;state&gt;</code> names the PGs, and
-<code>obioctl pg get &lt;pg_id&gt; --pool &lt;pool&gt;</code> says why and which members.
+<code>iolakectl pg list --pool &lt;pool&gt; --state &lt;state&gt;</code> names the PGs, and
+<code>iolakectl pg get &lt;pg_id&gt; --pool &lt;pool&gt;</code> says why and which members.
 - <strong>Down:</strong> fewer members answer than a read needs (k). Its objects
   can't be read or written. Bring the OSDs back.
 - <strong>Incomplete:</strong> fewer than a read quorum of its metadata copies
@@ -3963,22 +4105,22 @@ metrics (<code>objectio_disk_smart_*</code>) and replace it (<a href="#replacing
   within the pool's rule (not enough hosts, racks or free space). Add
   OSDs in the missing domain, or bring the member back.
 - <strong>Not clean for an hour with every OSD up:</strong> recovery is stuck or slow.
-  <code>obioctl pg get</code> shows its last error; <code>WaitTooFull</code> means a member to
+  <code>iolakectl pg get</code> shows its last error; <code>WaitTooFull</code> means a member to
   fill is past its full ratio (see <a href="#disks-filling-or-full">disks filling</a>).</p>
 <h3 id="objects-unreadable-or-unrecoverable">Objects unreadable or unrecoverable<a class="headerlink" href="#objects-unreadable-or-unrecoverable" title="Permanent link">&para;</a></h3>
 <p>Some stripes have fewer than k good shards: more failures at once than the
 code tolerates. Peering counts them per placement group as unfound
-(<code>objectio_meta_pg_objects_unfound</code>) while members may still bring
-them back; objects recorded lost (<code>objectio_meta_lost_objects</code>) have
+(<code>iolake_meta_pg_objects_unfound</code>) while members may still bring
+them back; objects recorded lost (<code>iolake_meta_lost_objects</code>) have
 fewer than k shards anywhere.
 1. Bring back every OSD that is down but intact (powered off, network).
    Their shards make the stripes readable again.
 2. Don't set OSDs <code>out</code> or wipe disks until this is resolved.
-3. What can't be brought back is lost. <code>obioctl pg get</code> gives the
+3. What can't be brought back is lost. <code>iolakectl pg get</code> gives the
    counts per placement group; no tool yet lists the objects.</p>
 <h3 id="a-slow-disk">A slow disk<a class="headerlink" href="#a-slow-disk" title="Permanent link">&para;</a></h3>
 <p>p99 shard fsync over 100 ms. Find the OSD from the per-OSD
-<code>objectio_osd_disk_seconds</code>. A drive getting slower often fails next:
+<code>iolake_osd_disk_seconds</code>. A drive getting slower often fails next:
 check SMART, and drain it (<a href="#replacing-a-disk">replacing a disk</a>) if it
 doesn't recover. A drive without power-loss protection is always slow to
 fsync.</p>
@@ -3989,12 +4131,12 @@ fsync.</p>
   gateway refuses writes for clock skew. See those runbooks.</li>
 <li><code>503 SlowDown</code> is a gateway at its memory budget or its in-flight limit
   (<a href="#gateway-memory-and-overload">gateway memory and overload</a>):
-  <code>objectio_gateway_requests_rejected_total</code> says which.</li>
+  <code>iolake_gateway_requests_rejected_total</code> says which.</li>
 <li>A 500 is a bug: report it with the gateway's log line for the request
   id.</li>
 </ul>
 <p>Space leaking: shard deletes are failing, so freed space stays allocated.
-Nothing reclaims it later yet (<a href="https://github.com/object-io/objectio/issues/83">objectio#83</a>).
+Nothing reclaims it later yet (<a href="https://github.com/io-lake/iolake/issues/83">iolake#83</a>).
 It is usually an OSD that is down. A leak is never a loss.</p>
 <h3 id="audit-events-dropped">Audit events dropped<a class="headerlink" href="#audit-events-dropped" title="Permanent link">&para;</a></h3>
 <p>Events are spooled on the gateway's disk until delivered. Drops mean:
@@ -4007,7 +4149,7 @@ It is usually an OSD that is down. A leak is never a loss.</p>
 <p>The oldest unreplicated version is over an hour old. That is how much a
 loss of this site would lose. Check the target's reachability and
 credentials, and the <code>result="error"</code> count of
-<code>objectio_replication_sent_total</code> (<a href="../../administration/replication/">replication</a>).</p>
+<code>iolake_replication_sent_total</code> (<a href="../../administration/replication/">replication</a>).</p>
 <h3 id="block-volumes">Block volumes<a class="headerlink" href="#block-volumes" title="Permanent link">&para;</a></h3>
 <p>The block gateway journals writes on its own disk before storing them as
 chunks.
@@ -4030,13 +4172,13 @@ loses writes not yet flushed (a known gap; see the block design).</p>
 <p>cert-manager renews 30 days before expiry. The services read their
 certificates only at start, so after a renewal restart them (rolling):
 <code>kubectl rollout restart statefulset/&lt;name&gt;-meta statefulset/&lt;name&gt;-osd deployment/&lt;name&gt;-gateway</code>,
-where <code>&lt;name&gt;</code> is the release name if it contains <code>objectio</code> (release
-<code>objectio</code>: <code>objectio-meta</code>), else <code>&lt;release&gt;-objectio</code>.
+where <code>&lt;name&gt;</code> is the release name if it contains <code>iolake</code> (release
+<code>iolake</code>: <code>iolake-meta</code>), else <code>&lt;release&gt;-iolake</code>.
 An expired certificate stops every internal call. There is no expiry
 metric yet: alert on cert-manager's <code>certmanager_certificate_expiration_timestamp_seconds</code>.</p>
 <h3 id="upgrades">Upgrades<a class="headerlink" href="#upgrades" title="Permanent link">&para;</a></h3>
 <p>Follow <a href="../upgrades/">upgrades</a>: meta first, then OSDs, then gateways, one
-at a time. Then <code>obioctl upgrade status</code>, and <code>obioctl upgrade finalize</code>
+at a time. Then <code>iolakectl upgrade status</code>, and <code>iolakectl upgrade finalize</code>
 once every node runs the new release. Back up a stopped follower's data
 directory (<code>meta.redb</code>, <code>raft-log</code>) first.</p>
 
@@ -4094,10 +4236,10 @@ directory (<code>meta.redb</code>, <code>raft-log</code>) first.</p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.sections", "navigation.top", "search.highlight", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "dev", "provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.sections", "navigation.top", "search.highlight", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "dev", "provider": "mike"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.c21346df.min.js"></script>
       
         <script src="../../installation/sizing-calculator.js"></script>
       
